@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+@keyframes fv-fly{0%{opacity:0;transform:translate(0,0) scale(.7) rotate(-5deg)}12%{opacity:1}50%{transform:translate(140%,-35%) scale(.92) rotate(3deg)}82%{opacity:1;transform:translate(268%,-4%) scale(.55) rotate(0deg)}100%{opacity:0;transform:translate(278%,0) scale(.5)}}
+@keyframes fv-pop{0%,58%{opacity:.2}72%,100%{opacity:1}}
+@keyframes fv-dash{to{stroke-dashoffset:-12}}
+@keyframes fv-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes fv-twinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+@keyframes pt-tick{0%,6%{opacity:0;transform:scale(.5)}18%,94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.5)}}
+@keyframes pt-rise{0%,10%{height:6%}42%,94%{height:100%}100%{height:6%}}
+@keyframes pt-glow{0%,100%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 0 rgba(47,148,97,0)}50%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 5px rgba(47,148,97,0.10)}}
+@media (prefers-reduced-motion:reduce){[style*="animation"]{animation:none!important}}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:#1F2D24;background:#E9F0EA;-webkit-font-smoothing:antialiased}
+a{color:#2F9461;text-decoration:none}
+a:hover{color:#25784E}
+.f-in{width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;font-weight:500;color:#1F2D24;background:#fff;border:1px solid #D3E0D7;border-radius:8px;padding:14px;line-height:1.5;-webkit-appearance:none;appearance:none;outline:none;transition:border-color .15s,box-shadow .15s}
+.f-in::placeholder{color:#A7B6AC;font-weight:400}
+.f-in:focus{border-color:#2F9461;box-shadow:0 0 0 3px rgba(47,148,97,0.16)}
+select.f-in{padding-right:40px;cursor:pointer;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232F9461' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px}
+select.f-in:required:invalid{color:#A7B6AC;font-weight:400}
+select.f-in option{color:#1F2D24;font-weight:500}
+select.f-in option[value=""]{color:#A7B6AC}
+</style>
+</helmet>
+
+<div style="max-width:480px;margin:0 auto;background:#fff;box-shadow:0 0 44px rgba(31,45,36,0.10);position:relative">
+
+<header data-screen-label="ヘッダー" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #E2ECE5">
+  <div style="padding:0 16px;height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+      <img src="./uploads/logo.png" alt="WORKL ワークル" style="height:32px;width:auto;display:block;align-self:flex-start">
+      <div style="font-size:9px;color:#5E7266;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">AIで100媒体以上に自動配信する採用支援ツール</div>
+    </div>
+    <a href="./form.html" data-cta="cta_header" style="flex:none;display:inline-block;background:#EA7A1F;color:#fff;font-size:11px;font-weight:900;letter-spacing:-0.01em;padding:10px 12px;border-radius:6px;white-space:nowrap" style-hover="background:#D96C10;color:#fff">3分で分かる資料を無料DL</a>
+  </div>
+</header>
+
+<section data-screen-label="01 FV" style="position:relative;overflow:hidden;background:linear-gradient(150deg,#F7FBF8 0%,#EAF4ED 55%,#DFEFE5 100%);border-bottom:1px solid #E2ECE5">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 640" preserveAspectRatio="xMidYMid slice">
+    <circle cx="-30" cy="80" r="120" fill="none" stroke="#CBE5D4" stroke-width="1.5"></circle>
+    <circle cx="-30" cy="80" r="90" fill="none" stroke="#D8ECDF" stroke-width="1.5"></circle>
+    <circle cx="400" cy="580" r="130" fill="none" stroke="#C4E2CF" stroke-width="1.5"></circle>
+    <path d="M300 -40 L420 80" stroke="#BFDECB" stroke-width="1.5"></path>
+    <path d="M60 20 l9 9 m0 -9 l-9 9" stroke="#A9D2B8" stroke-width="2"></path>
+    <path d="M340 130 h3 v7 h7 v3 h-7 v7 h-3 v-7 h-7 v-3 h7 z" fill="#9CC9AC"></path>
+    <g fill="#BFDECB">
+      <circle cx="320" cy="360" r="2"></circle><circle cx="335" cy="360" r="2"></circle><circle cx="350" cy="360" r="2"></circle>
+      <circle cx="320" cy="375" r="2"></circle><circle cx="335" cy="375" r="2"></circle><circle cx="350" cy="375" r="2"></circle>
+    </g>
+  </svg>
+  <div style="position:relative;padding:36px 20px 44px;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center">
+    <div style="background:#fff;border:1px solid #C7E0CF;border-radius:100px;padding:7px 18px;font-size:13px;font-weight:700;color:#44554A;white-space:nowrap">採用したいけど外注すると高い…</div>
+    <h1 style="margin:0;font-size:26px;line-height:1.5;font-weight:900;letter-spacing:0.01em"><span style="color:#2F9461">100以上</span>の求人媒体から<br>最適な媒体へ自動配信！</h1>
+    <p style="margin:0;font-size:16px;font-weight:700;line-height:1.7;color:#1F2D24"><span style="background:linear-gradient(transparent 62%,#FFE29B 62%);white-space:nowrap">月額5.98万円</span>の採用支援ツール<br>求人を月額で出し放題</p>
+    <div style="position:relative;width:100%;aspect-ratio:16/11;margin:4px 0">{{ fvIllustration }}</div>
+    <a href="./form.html" data-cta="cta_fv_main" style="display:flex;flex-direction:column;align-items:center;gap:2px;background:#EA7A1F;color:#fff;border-radius:8px;padding:15px 24px;box-shadow:0 3px 0 #C25E0B;width:100%;box-sizing:border-box" style-hover="background:#D96C10;color:#fff">
+      <span style="font-size:12px;font-weight:700;opacity:0.95">＼応募単価1,000円の実績も多数／</span>
+      <span style="font-size:17px;font-weight:900">3分で分かる資料を無料DL</span>
+    </a>
+  </div>
+</section>
+
+<section data-screen-label="02 権威付け" style="position:relative;overflow:hidden;background:#fff;border-bottom:1px solid #EAF1EB">
+  <div style="position:relative;padding:26px 16px 28px;display:flex;flex-direction:column;align-items:center;gap:16px">
+    <img src="./uploads/authority-supervisor.png" alt="元Indeed トップセールス監修" style="display:block;width:258px;max-width:74%;height:auto">
+    <div style="display:flex;align-items:center;justify-content:center;gap:20px;width:100%;max-width:298px">
+      <img src="./uploads/authority-companies.png" alt="導入企業 10,000事業所" style="flex:3.81 1 0;min-width:0;height:auto;display:block">
+      <img src="./uploads/authority-media.png" alt="配信提携媒体 100以上" style="flex:2.86 1 0;min-width:0;height:auto;display:block">
+    </div>
+  </div>
+</section>
+
+<section id="logos" data-screen-label="03 導入企業" style="background:#fff">
+  <div style="padding:32px 20px 40px;display:flex;flex-direction:column;gap:18px;align-items:center">
+    <h2 style="margin:0;font-size:15px;font-weight:700;color:#44554A">導入企業様（一部）</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%">
+      <sc-for list="{{ logoSlots }}" as="slot" hint-placeholder-count="6">
+        <div style="background:repeating-linear-gradient(45deg,#F0F6F1 0 10px,#EAF1EB 10px 20px);border:1px solid #E2ECE5;border-radius:6px;height:52px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:10px;color:#95A99B">企業ロゴ</div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="04 悩み" style="position:relative;overflow:hidden;background:linear-gradient(160deg,#1F4632 0%,#15301E 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 700" preserveAspectRatio="xMidYMid slice">
+    <circle cx="40" cy="640" r="110" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"></circle>
+    <circle cx="380" cy="60" r="90" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"></circle>
+    <path d="M330 600 l9 9 m0 -9 l-9 9" stroke="rgba(255,255,255,0.28)" stroke-width="2"></path>
+    <path d="M70 90 h3 v7 h7 v3 h-7 v7 h-3 v-7 h-7 v-3 h7 z" fill="rgba(255,255,255,0.28)"></path>
+  </svg>
+  <div style="position:relative;padding:52px 20px;display:flex;flex-direction:column;gap:28px;align-items:center">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#8FE0B4"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#8FE0B4">PROBLEM</span><span style="display:block;width:24px;height:2px;background:#8FE0B4"></span></div>
+      <h2 style="margin:0;font-size:22px;font-weight:900;letter-spacing:0.01em;line-height:1.6;color:#fff">採用活動において<br>こんなお悩みありませんか？</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;width:100%">
+      <div style="background:#fff;border-radius:10px;padding:16px 18px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 8px 20px rgba(6,26,16,0.28)">
+        <div style="flex:none;width:20px;height:20px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:14px;font-weight:700;line-height:1.7;color:#1F2D24">媒体に出稿しても、<span style="background:linear-gradient(transparent 58%,#FFE06B 58%);font-weight:900;white-space:nowrap">応募が集まらない</span></div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:16px 18px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 8px 20px rgba(6,26,16,0.28)">
+        <div style="flex:none;width:20px;height:20px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:14px;font-weight:700;line-height:1.7;color:#1F2D24">採用はできるが、<span style="background:linear-gradient(transparent 58%,#FFE06B 58%);font-weight:900;white-space:nowrap">採用コストが高い</span></div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:16px 18px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 8px 20px rgba(6,26,16,0.28)">
+        <div style="flex:none;width:20px;height:20px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:14px;font-weight:700;line-height:1.7;color:#1F2D24">自社で採用したいが、<span style="background:linear-gradient(transparent 58%,#FFE06B 58%);font-weight:900;white-space:nowrap">運用に手が回らない</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;display:flex;flex-direction:column;gap:10px">
+      <p style="margin:0;font-size:18px;font-weight:900;line-height:1.7;color:#fff">その応募不足、<br><span style="background:linear-gradient(transparent 62%,rgba(255,224,107,0.45) 62%);white-space:nowrap">媒体のミスマッチ</span>かもしれません。</p>
+      <p style="margin:0;font-size:13px;line-height:1.9;color:#C7DCCF">職種・年齢層・経験年数によって、<br>求める人材が集まる媒体は大きく変わります。</p>
+    </div>
+  </div>
+</section>
+
+<section id="compare" data-screen-label="05 WORKLなら" style="position:relative;overflow:hidden;background:#fff">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 800" preserveAspectRatio="xMidYMid slice">
+    <path d="M370 90 l40 23 v46 l-40 23 l-40 -23 v-46 z" fill="none" stroke="#D8ECDF" stroke-width="1.5"></path>
+    <path d="M20 640 l40 23 v46 l-40 23 l-40 -23 v-46 z" fill="none" stroke="#D8ECDF" stroke-width="1.5"></path>
+    <g fill="#BFDECB">
+      <circle cx="40" cy="120" r="2"></circle><circle cx="55" cy="120" r="2"></circle><circle cx="70" cy="120" r="2"></circle>
+      <circle cx="40" cy="135" r="2"></circle><circle cx="55" cy="135" r="2"></circle><circle cx="70" cy="135" r="2"></circle>
+    </g>
+  </svg>
+  <div style="position:relative;padding:52px 20px;display:flex;flex-direction:column;gap:32px;align-items:center">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">SOLUTION</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <div style="font-size:15px;font-weight:900;color:#2F9461">AI採用のWORKLなら</div>
+      <h2 style="margin:0;font-size:23px;font-weight:900;line-height:1.55">100媒体以上に<br>求人出し放題！</h2>
+      <p style="margin:0;font-size:15px;font-weight:700;line-height:1.8;color:#1F2D24">月額5.98万円で採用コストを<span style="background:linear-gradient(transparent 62%,#FFE29B 62%)">大幅に削減</span>し、<br>媒体のミスマッチによる応募不足を解消します。</p>
+      <p style="margin:0;font-size:13px;line-height:1.9;color:#44554A">10,000事業所以上の支援実績から、<br>相性の良い採用媒体にAIが定期的に求人出稿します。</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center;width:100%">
+      <div style="background:#fff;border:1px solid #DCE8DF;border-radius:10px;overflow:hidden;width:100%;max-width:340px">
+        <div style="background:#5E7266;color:#fff;text-align:center;font-size:13px;font-weight:700;padding:10px">一般的な採用代行</div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:10px;align-items:center">
+          <div style="font-size:12px;color:#5E7266">月額</div>
+          <div style="font-size:32px;font-weight:900;color:#44554A;line-height:1;white-space:nowrap">10〜30<span style="font-size:16px">万円</span><span style="font-size:13px;font-weight:700">※</span></div>
+          <div style="font-size:12px;font-weight:700;color:#5E7266;border-top:1px dashed #CDE0D3;padding-top:10px;width:100%;text-align:center;white-space:nowrap">出稿先は 1〜3媒体</div>
+        </div>
+      </div>
+      <svg width="26" height="26" viewBox="0 0 30 30" fill="none" style="transform:rotate(90deg)"><path d="M6 5 L16 15 L6 25 M15 5 L25 15 L15 25" stroke="#2F9461" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <div style="background:#2F9461;border-radius:10px;overflow:hidden;box-shadow:0 12px 28px rgba(47,148,97,0.28);width:100%;max-width:340px">
+        <div style="background:#1F6B45;color:#fff;text-align:center;font-size:14px;font-weight:900;padding:11px;letter-spacing:0.02em">AI採用のWORKL</div>
+        <div style="padding:22px;display:flex;flex-direction:column;gap:10px;align-items:center">
+          <div style="font-size:12px;color:#D6EEDD">月額</div>
+          <div style="font-size:42px;font-weight:900;color:#fff;line-height:1;white-space:nowrap">5.98<span style="font-size:19px">万円〜</span></div>
+          <div style="font-size:12px;font-weight:700;color:#fff;border-top:1px dashed rgba(255,255,255,0.4);padding-top:10px;width:100%;text-align:center;white-space:nowrap">100媒体以上から最適出稿</div>
+        </div>
+      </div>
+      <p style="margin:0;font-size:11px;color:#7C9084;white-space:nowrap">※ 採用代行サービス10社の料金を当社にて比較</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="06 成果の出る理由" style="position:relative;overflow:hidden;background:linear-gradient(200deg,#F5FAF6 0%,#E9F3EC 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 1100" preserveAspectRatio="xMidYMid slice">
+    <circle cx="390" cy="120" r="110" fill="none" stroke="#CFE7D8" stroke-width="1.5"></circle>
+    <circle cx="0" cy="880" r="130" fill="none" stroke="#CFE7D8" stroke-width="1.5"></circle>
+    <path d="M40 300 l9 9 m0 -9 l-9 9" stroke="#A9D2B8" stroke-width="2"></path>
+    <path d="M350 760 l9 9 m0 -9 l-9 9" stroke="#A9D2B8" stroke-width="2"></path>
+  </svg>
+  <div style="position:relative;padding:52px 20px;display:flex;flex-direction:column;gap:36px">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">REASON</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <h2 style="margin:0;font-size:22px;font-weight:900;line-height:1.6">AI採用のWORKLで<br>安く採用できるポイント</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <sc-for list="{{ points }}" as="pt" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="flex:none;background:#2F9461;color:#fff;font-size:12px;font-weight:900;letter-spacing:0.06em;padding:5px 12px;border-radius:100px">POINT {{ pt.num }}</div>
+          </div>
+          <h3 style="margin:0;font-size:19px;font-weight:900;line-height:1.5">{{ pt.title }}</h3>
+          <p style="margin:0;font-size:13px;line-height:1.9;color:#44554A">{{ pt.desc }}</p>
+          <div style="position:relative;width:100%;box-sizing:border-box;background:linear-gradient(160deg,#FDFEFD,#F2F8F4);border:1px solid #DCE8DF;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(31,45,36,0.08);padding:16px">{{ pt.illo }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="07 疑問解消" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#1C3B2D 0%,#16311F 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 520" preserveAspectRatio="xMidYMid slice">
+    <path d="M-20 460 L200 240" stroke="#2A5240" stroke-width="1.5"></path>
+    <circle cx="380" cy="460" r="100" fill="none" stroke="#2A5240" stroke-width="1.5"></circle>
+    <path d="M330 80 l9 9 m0 -9 l-9 9" stroke="#3B6B52" stroke-width="2"></path>
+  </svg>
+  <div style="position:relative;padding:44px 20px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+    <div style="position:relative;width:100%;background:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 24px rgba(6,26,16,0.3)">
+      <div style="font-size:16px;font-weight:900;line-height:1.7;color:#1F2D24">安いのは分かったけど、<br><span style="background:linear-gradient(transparent 58%,#FFE06B 58%)">本当に応募は集まるの？</span></div>
+      <div aria-hidden="true" style="position:absolute;left:50%;bottom:-9px;transform:translateX(-50%) rotate(45deg);width:18px;height:18px;background:#fff;border-radius:0 0 3px 0"></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><span style="display:block;width:20px;height:2px;background:#EA7A1F"></span><span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#EA7A1F">ANSWER</span><span style="display:block;width:20px;height:2px;background:#EA7A1F"></span></div>
+    <p style="margin:0;font-size:19px;font-weight:900;color:#fff;line-height:1.7">集まります。<span style="background:linear-gradient(transparent 60%,rgba(234,122,31,0.5) 60%)">応募が出る媒体</span>を<br>データで知っているからです。</p>
+    <div style="display:flex;flex-direction:column;gap:6px;width:100%;margin-top:2px">
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
+        <span style="flex:none;font-size:15px;font-weight:900;color:#8FE0B4;line-height:1">01</span>
+        <div style="font-size:13px;font-weight:700;line-height:1.6;color:#fff"><span style="color:#8FE0B4;font-weight:900">10,000事業所</span>の配信実績データ</div>
+      </div>
+      <div aria-hidden="true" style="display:flex;justify-content:center"><svg viewBox="0 0 24 24" style="width:13px;height:13px;display:block"><path d="M12 4 L12 19 M5 13 L12 20 L19 13" fill="none" stroke="rgba(143,224,180,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
+        <span style="flex:none;font-size:15px;font-weight:900;color:#8FE0B4;line-height:1">02</span>
+        <div style="font-size:13px;font-weight:700;line-height:1.6;color:#fff">同業種で<span style="color:#8FE0B4;font-weight:900">応募が出た媒体</span>を特定</div>
+      </div>
+      <div aria-hidden="true" style="display:flex;justify-content:center"><svg viewBox="0 0 24 24" style="width:13px;height:13px;display:block"><path d="M12 4 L12 19 M5 13 L12 20 L19 13" fill="none" stroke="rgba(143,224,180,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
+        <span style="flex:none;font-size:15px;font-weight:900;color:#8FE0B4;line-height:1">03</span>
+        <div style="font-size:13px;font-weight:700;line-height:1.6;color:#fff">最適な媒体に<span style="color:#8FE0B4;font-weight:900">AIが自動出稿</span></div>
+      </div>
+    </div>
+    <p style="margin:2px 0 0;font-size:15px;font-weight:900;line-height:1.7;color:#fff">だから、応募単価<span style="color:#FFE06B;font-size:19px">1,000円</span>の実績も多数。</p>
+  </div>
+</section>
+
+<section id="cases" data-screen-label="08 導入事例" style="position:relative;overflow:hidden;background:#fff">
+  <div style="position:relative;padding:52px 0 52px;display:flex;flex-direction:column;gap:26px">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center;padding:0 20px">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">CASE STUDY</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <h2 style="margin:0;font-size:22px;font-weight:900;line-height:1.55"><span style="color:#2F9461">100以上</span>の業種で<br>選ばれています</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center">
+        <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="10">
+          <div style="border:1px solid #C7E0CF;border-radius:100px;padding:4px 12px;font-size:11px;font-weight:500;color:#44554A;white-space:nowrap">{{ ind }}</div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;overflow-x:auto;padding:4px 20px 14px;scroll-snap-type:x mandatory">
+      <sc-for list="{{ cases }}" as="cs" hint-placeholder-count="4">
+        <div style="flex:none;width:270px;scroll-snap-align:center;background:#fff;border:1px solid #DCE8DF;border-radius:8px;padding:20px 18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11px;font-weight:700;color:#2F9461;letter-spacing:0.04em">{{ cs.industry }}</div>
+            <div style="font-size:16px;font-weight:900;line-height:1.5">{{ cs.title }}</div>
+          </div>
+          <div style="border-top:1px solid #EAF1EB;border-bottom:1px solid #EAF1EB;padding:11px 0;display:flex;align-items:baseline;gap:8px">
+            <span style="font-size:11px;font-weight:700;color:#44554A;white-space:nowrap">応募単価</span>
+            <span style="font-size:24px;font-weight:900;color:#2F9461;line-height:1;white-space:nowrap">{{ cs.price }}</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:flex-start">
+            <span style="flex:none;font-size:10px;font-weight:700;color:#7C9084;border:1px solid #CDE0D3;border-radius:4px;padding:2px 7px;margin-top:2px">課題</span>
+            <span style="font-size:12px;line-height:1.7;color:#44554A">{{ cs.problem }}</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:flex-start">
+            <span style="flex:none;font-size:10px;font-weight:700;color:#fff;background:#2F9461;border-radius:4px;padding:3px 7px;margin-top:2px">打ち手</span>
+            <span style="font-size:12px;line-height:1.7;color:#1F2D24">{{ cs.solution }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin:0;font-size:11px;color:#7C9084;text-align:center">※ 応募単価は導入企業の実績値です。横にスワイプできます →</p>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="09 よくあるご質問" style="position:relative;overflow:hidden;background:linear-gradient(160deg,#F3F8F4 0%,#ECF4EE 100%)">
+  <div style="position:relative;padding:52px 20px;display:flex;flex-direction:column;gap:24px">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">FAQ</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <h2 style="margin:0;font-size:22px;font-weight:900">よくあるご質問</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;overflow:hidden">
+          <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;gap:10px;padding:14px 14px;background:none;border:none;cursor:pointer;text-align:left;font-family:inherit">
+            <span style="flex:none;width:24px;height:24px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">Q</span>
+            <span style="flex:1;font-size:13px;font-weight:700;color:#1F2D24;line-height:1.6">{{ f.q }}</span>
+            <span style="flex:none;font-size:18px;font-weight:500;color:#2F9461">{{ f.icon }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 14px 16px 48px;font-size:12px;line-height:1.9;color:#44554A">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="cta" data-screen-label="10 CTA" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2F9461 0%,#268050 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 700" preserveAspectRatio="xMidYMid slice">
+    <circle cx="20" cy="640" r="110" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <circle cx="390" cy="50" r="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <path d="M60 60 l9 9 m0 -9 l-9 9" stroke="rgba(255,255,255,0.3)" stroke-width="2"></path>
+    <g fill="rgba(255,255,255,0.25)">
+      <circle cx="330" cy="600" r="2"></circle><circle cx="345" cy="600" r="2"></circle><circle cx="360" cy="600" r="2"></circle>
+      <circle cx="330" cy="615" r="2"></circle><circle cx="345" cy="615" r="2"></circle><circle cx="360" cy="615" r="2"></circle>
+    </g>
+  </svg>
+  <div style="position:relative;padding:0 0 52px;display:flex;flex-direction:column;gap:24px;align-items:center;text-align:center">
+    <h2 style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">期間限定｜あなたの業種だと採用単価はいくらが適正？ 採用単価の無料診断レポート プレゼント中</h2>
+    <img src="./uploads/cta-report-banner.png" alt="期間限定 あなたの業種だと採用単価はいくらが適正？ 採用単価の無料診断レポート プレゼント中" style="display:block;width:100%;height:auto">
+    <div style="width:100%;padding:0 20px;box-sizing:border-box;display:flex;flex-direction:column;gap:22px;align-items:center">
+    <a href="./form.html" data-cta="cta_main" style="display:flex;flex-direction:column;align-items:center;gap:2px;background:#EA7A1F;color:#fff;border-radius:10px;padding:16px 24px;box-shadow:0 4px 0 #C25E0B;width:100%;box-sizing:border-box" style-hover="background:#D96C10;color:#fff">
+      <span style="font-size:12px;font-weight:700;opacity:0.95">＼応募単価1,000円の実績も多数／</span>
+      <span style="font-size:18px;font-weight:900">3分で分かる資料を無料DL</span>
+    </a>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="11 フッター" style="background:#142A1F;padding-bottom:92px">
+  <div style="padding:40px 20px 28px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+      <div style="background:#fff;border-radius:8px;padding:7px 12px"><img src="./uploads/logo.png" alt="WORKL ワークル" style="height:28px;display:block"></div>
+      <div style="font-size:11px;color:#93AC9C">AIで100媒体以上に自動配信する採用支援ツール</div>
+    </div>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="#logos" style="font-size:12px;color:#C2D6C8" style-hover="color:#fff">導入企業</a>
+      <a href="#cases" style="font-size:12px;color:#C2D6C8" style-hover="color:#fff">導入事例</a>
+      <a href="#compare" style="font-size:12px;color:#C2D6C8" style-hover="color:#fff">料金</a>
+      <a href="#faq" style="font-size:12px;color:#C2D6C8" style-hover="color:#fff">FAQ</a>
+      <a href="./form.html" style="font-size:12px;color:#C2D6C8" style-hover="color:#fff">お問い合わせ</a>
+    </nav>
+    <div style="border-top:1px solid #2A4A3A;padding-top:18px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://www.keep-search.co.jp/company/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">会社概要</a>
+        <a href="https://www.keep-search.co.jp/policy/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">プライバシーポリシー</a>
+        <a href="https://www.keep-search.co.jp/laws/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">個人情報保護方針</a>
+        <a href="https://www.keep-search.co.jp/security/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">情報セキュリティ基本方針</a>
+      </div>
+      <div style="font-size:11px;color:#93AC9C">© WORKL</div>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="追従CTAバー" style="position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;pointer-events:none">
+    <div style="pointer-events:auto;width:100%;max-width:480px;background:#fff;border-top:1px solid #E2ECE5;box-shadow:0 -4px 16px rgba(30,42,56,0.10);padding:10px 16px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;align-items:center">
+      <div style="font-size:12px;font-weight:700;color:#1F2D24;white-space:nowrap">月額<span style="color:#2F9461;font-size:15px;font-weight:900">5.98万円〜</span>／AIが100媒体以上に自動配信</div>
+      <a href="./form.html" data-cta="cta_sticky" style="display:block;width:100%;box-sizing:border-box;text-align:center;background:#EA7A1F;color:#fff;border-radius:8px;padding:12px;font-size:15px;font-weight:900;box-shadow:0 3px 0 #C25E0B" style-hover="background:#D96C10;color:#fff">3分で分かる資料を無料DL</a>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;stickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;CTA&quot;},&quot;faqAllOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;FAQ&quot;}}">
+class Component extends DCLogic {
+  state = { open: { 0: true }, showSticky: false };
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 560;
+      if (s !== this.state.showSticky) this.setState({ showSticky: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  faqData = [
+    { q: '契約期間に縛りはありますか？', a: '長期契約の縛りはありません。ご利用状況に合わせて柔軟にご契約いただけます。詳細は無料相談にてご案内します。' },
+    { q: '求人原稿は自社で作る必要がありますか？', a: 'いいえ。成果の出る求人票をAIが自動で作成します。もちろん、内容の確認・修正はいつでも可能です。' },
+    { q: 'どの業界・職種でも使えますか？', a: 'SES、飲食、人材派遣、建築、介護、運輸、小売、製造、物流、保険など、幅広い業界で実績があります。貴社の業種での実績は無料相談にてご確認いただけます。' },
+    { q: '既存の媒体契約と併用できますか？', a: 'はい、併用可能です。現在ご利用中の媒体を継続しながら、WORKLで配信先を広げる形でスタートできます。' },
+    { q: '自社の業種での事例はありますか？', a: 'SES、飲食店、人材派遣業、現場作業・建築業、介護、運輸など、幅広い業種の導入事例がございます。貴社の業種の事例は、無料相談または資料にてご確認いただけます。' }
+  ];
+  buildFV() {
+    if (this._fv) return this._fv;
+    const h = React.createElement;
+    const line = (w, c) => h('div', { style: { height: 5, width: w, background: c || '#DCE4DE', borderRadius: 3 } });
+    const dot = (k) => h('span', { key: k, style: { width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,255,255,0.75)', display: 'block' } });
+    const winDot = (c, k) => h('span', { key: k, style: { width: 4, height: 4, borderRadius: '50%', background: c, display: 'block' } });
+    const navItem = (label, active, k) => h('div', { key: k, style: { display: 'flex', alignItems: 'center', gap: 4, width: '100%', boxSizing: 'border-box', padding: '3px 4px', borderRadius: 3, background: active ? '#DFF2E6' : 'transparent' } },
+      h('div', { style: { width: 7, height: 7, borderRadius: 2, background: active ? '#2F9461' : '#BACEC1', flex: 'none' } }),
+      h('span', { style: { fontSize: 6, fontWeight: 700, lineHeight: 1, color: active ? '#1F6B45' : '#8AA093', whiteSpace: 'nowrap' } }, label));
+    const statBox = (label, val, unit, k) => h('div', { key: k, style: { flex: 1, minWidth: 0, background: '#fff', border: '1px solid #E4EDE7', borderRadius: 4, padding: '4px 5px', display: 'flex', flexDirection: 'column', gap: 3 } },
+      h('span', { style: { fontSize: 5, fontWeight: 700, lineHeight: 1, color: '#8AA093', whiteSpace: 'nowrap' } }, label),
+      h('span', { style: { fontSize: 9, fontWeight: 900, lineHeight: 1, color: '#1F2D24', whiteSpace: 'nowrap' } }, val, h('span', { style: { fontSize: 5, fontWeight: 700 } }, unit)));
+    const mediaRow = (name, count, bar, k) => h('div', { key: k, style: { display: 'flex', alignItems: 'center', gap: 4, padding: '4px 5px', borderTop: '1px solid #EFF5F1' } },
+      h('div', { style: { width: 7, height: 7, borderRadius: 2, background: 'linear-gradient(135deg,#7FC29B,#4CA876)', flex: 'none' } }),
+      h('span', { style: { fontSize: 6, fontWeight: 700, lineHeight: 1, color: '#1F2D24', flex: 1, minWidth: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, name),
+      h('div', { style: { width: '26%', height: 3, borderRadius: 2, background: '#EDF3EF', flex: 'none', overflow: 'hidden' } },
+        h('div', { style: { width: bar, height: '100%', background: '#4CA876' } })),
+      h('span', { style: { fontSize: 6, fontWeight: 900, lineHeight: 1, color: '#2F9461', flex: 'none', width: 13, textAlign: 'right' } }, count));
+    const laptop = h('div', { style: { position: 'absolute', left: '-4%', top: '15%', width: '68%' } },
+      h('div', { style: { position: 'relative', background: 'linear-gradient(160deg,#3A4C42,#25332C)', borderRadius: '9px 9px 4px 4px', padding: '8px 5px 6px', boxShadow: '0 20px 40px rgba(31,45,36,0.20)' } },
+        h('div', { style: { position: 'absolute', top: 3, left: '50%', transform: 'translateX(-50%)', width: 3, height: 3, borderRadius: '50%', background: '#6B7F73' } }),
+        h('div', { style: { position: 'relative', background: '#fff', borderRadius: 2, overflow: 'hidden' } },
+          h('div', { style: { height: 13, background: '#DDE7E0', display: 'flex', alignItems: 'flex-end', gap: 4, padding: '0 5px' } },
+            h('div', { style: { display: 'flex', gap: 2.5, alignItems: 'center', paddingBottom: 4, flex: 'none' } }, winDot('#E9887C', 1), winDot('#F2C46B', 2), winDot('#78C494', 3)),
+            h('div', { style: { display: 'flex', alignItems: 'center', gap: 3, background: '#fff', borderRadius: '4px 4px 0 0', padding: '3px 6px', maxWidth: '62%', minWidth: 0 } },
+              h('div', { style: { width: 5, height: 5, borderRadius: 1.5, background: '#2F9461', flex: 'none' } }),
+              h('span', { style: { fontSize: 5.5, fontWeight: 700, lineHeight: 1, color: '#44554A', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, 'WORKL 管理画面'))),
+          h('div', { style: { height: 12, background: '#F3F7F4', borderBottom: '1px solid #E2ECE5', display: 'flex', alignItems: 'center', gap: 4, padding: '0 5px' } },
+            h('svg', { viewBox: '0 0 24 24', style: { width: 5, height: 5, flex: 'none' } }, h('path', { d: 'M15 5 L8 12 L15 19', fill: 'none', stroke: '#9DB3A5', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' })),
+            h('svg', { viewBox: '0 0 24 24', style: { width: 5, height: 5, flex: 'none' } }, h('path', { d: 'M9 5 L16 12 L9 19', fill: 'none', stroke: '#C6D5CB', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' })),
+            h('div', { style: { flex: 1, minWidth: 0, height: 9, background: '#fff', border: '1px solid #E2ECE5', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 3, padding: '0 5px' } },
+              h('svg', { viewBox: '0 0 24 24', style: { width: 4.5, height: 4.5, flex: 'none' } },
+                h('path', { d: 'M7 11V7.5a5 5 0 0 1 10 0V11', fill: 'none', stroke: '#8AA093', strokeWidth: 2.5 }),
+                h('rect', { x: 5, y: 10.5, width: 14, height: 9.5, rx: 2, fill: '#8AA093' })),
+              h('span', { style: { fontSize: 5, fontWeight: 600, lineHeight: 1, color: '#8AA093', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, 'workl.jp/dashboard'))),
+          h('div', { style: { display: 'flex', minHeight: 0 } },
+            h('div', { style: { flex: 'none', width: '23%', background: '#F6FAF7', borderRight: '1px solid #E7EFE9', padding: '6px 4px', display: 'flex', flexDirection: 'column', gap: 3 } },
+              h('div', { style: { display: 'flex', alignItems: 'center', gap: 3, padding: '0 3px 4px' } },
+                h('div', { style: { width: 8, height: 8, borderRadius: 2, background: 'linear-gradient(135deg,#4CA876,#2F9461)', flex: 'none' } }),
+                h('span', { style: { fontSize: 6, fontWeight: 900, lineHeight: 1, color: '#1F2D24', letterSpacing: '0.02em' } }, 'WORKL')),
+              navItem('ダッシュボード', true, 1), navItem('求人管理', false, 2), navItem('応募者', false, 3), navItem('配信媒体', false, 4), navItem('レポート', false, 5)),
+            h('div', { style: { flex: 1, minWidth: 0, padding: '7px 7px 8px', display: 'flex', flexDirection: 'column', gap: 5, background: '#FBFDFC' } },
+              h('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 5 } },
+                h('span', { style: { fontSize: 7.5, fontWeight: 900, lineHeight: 1, color: '#1F2D24', whiteSpace: 'nowrap' } }, '配信レポート'),
+                h('div', { style: { display: 'flex', alignItems: 'center', gap: 3, background: '#DFF2E6', borderRadius: 100, padding: '2px 5px', flex: 'none' } },
+                  h('div', { style: { width: 10, height: 5.5, borderRadius: 100, background: '#2F9461', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: 1, boxSizing: 'border-box', flex: 'none' } },
+                    h('div', { style: { width: 3.5, height: 3.5, borderRadius: '50%', background: '#fff' } })),
+                  h('span', { style: { fontSize: 5.5, fontWeight: 900, lineHeight: 1, color: '#1F6B45', whiteSpace: 'nowrap' } }, 'AI自動配信 ON'))),
+              h('div', { style: { display: 'flex', gap: 4 } }, statBox('今月の応募', '128', '件', 1), statBox('出稿媒体', '104', '媒体', 2), statBox('応募単価', '¥1,020', '', 3)),
+              h('div', { style: { background: '#fff', border: '1px solid #E7EFE9', borderRadius: 5, overflow: 'hidden' } },
+                h('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 5px', background: '#F4F8F5' } },
+                  h('span', { style: { fontSize: 5.5, fontWeight: 700, lineHeight: 1, color: '#7C9084' } }, '配信中の媒体'),
+                  h('span', { style: { fontSize: 5.5, fontWeight: 700, lineHeight: 1, color: '#7C9084' } }, '応募数')),
+                mediaRow('求人検索エンジン A', '42', '86%', 1), mediaRow('求人ポータル B', '31', '64%', 2), mediaRow('アグリゲーター C', '24', '48%', 3), mediaRow('地域特化媒体 D', '18', '34%', 4)))),
+          h('div', { style: { position: 'absolute', inset: 0, pointerEvents: 'none', background: 'linear-gradient(115deg, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0.06) 26%, rgba(255,255,255,0) 46%)' } }))),
+      h('div', { style: { height: 8, background: 'linear-gradient(180deg,#D2DCD6,#93A99C)', borderRadius: '0 0 5px 5px', margin: '0 -3.5%', position: 'relative' } },
+        h('div', { style: { position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '16%', height: 3, background: '#7C9184', borderRadius: '0 0 4px 4px' } })),
+      h('div', { style: { height: 12, margin: '2px 5% 0', background: 'radial-gradient(ellipse at center, rgba(31,45,36,0.18), transparent 70%)' } }));
+    const flyCard = (top, delay, k) => h('div', { key: k, style: { position: 'absolute', left: '38%', top, width: '16.5%', background: '#fff', border: '1px solid #D8E5DC', borderRadius: 8, padding: 7, boxShadow: '0 8px 18px rgba(31,45,36,0.16)', display: 'flex', alignItems: 'center', gap: 5, opacity: 0, animation: 'fv-fly 4.8s ease-in-out ' + delay + 's infinite' } },
+      h('div', { style: { width: 13, height: 13, borderRadius: 4, background: 'linear-gradient(135deg,#4CA876,#2F9461)', flex: 'none' } }),
+      h('div', { style: { display: 'flex', flexDirection: 'column', gap: 3, flex: 1 } }, line('90%'), line('58%')));
+    const miniCard = (delay, k) => h('div', { key: k, style: { display: 'flex', alignItems: 'center', gap: 5, background: '#F1F7F3', border: '1px solid #E4EDE7', borderRadius: 6, padding: 6, animation: 'fv-pop 4.8s ease ' + delay + 's infinite' } },
+      h('div', { style: { width: 11, height: 11, borderRadius: 3, background: '#2F9461', flex: 'none' } }),
+      h('div', { style: { display: 'flex', flexDirection: 'column', gap: 3, flex: 1 } }, line('86%', '#CFDFD5'), line('55%', '#CFDFD5')));
+    const phone = h('div', { style: { position: 'absolute', right: '-2%', top: '17%', width: '24%', animation: 'fv-float 5.5s ease-in-out infinite' } },
+      h('div', { style: { border: '5px solid #2E3F35', borderRadius: 24, background: '#fff', padding: '16px 8px 10px', display: 'flex', flexDirection: 'column', gap: 6, position: 'relative', boxShadow: '0 20px 40px rgba(31,45,36,0.18)' } },
+        h('div', { style: { position: 'absolute', top: 5, left: '50%', transform: 'translateX(-50%)', width: '34%', height: 5, background: '#2E3F35', borderRadius: 3 } }),
+        miniCard(0.6, 1), miniCard(2.2, 2), miniCard(3.8, 3),
+        h('div', { style: { height: 16, borderRadius: 100, background: 'linear-gradient(180deg,#3AA26C,#2F9461)', margin: '2px 5% 0', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 3, boxShadow: '0 3px 8px rgba(47,148,97,0.35)' } },
+          dot(1), dot(2), dot(3), dot(4))),
+      h('div', { style: { height: 11, margin: '8px 8% 0', background: 'radial-gradient(ellipse at center, rgba(31,45,36,0.18), transparent 70%)' } }));
+    const arc = h('svg', { viewBox: '0 0 200 100', style: { position: 'absolute', left: '46%', top: '31%', width: '32%', overflow: 'visible' } },
+      h('path', { d: 'M0 66 C 60 8, 140 8, 200 52', fill: 'none', stroke: '#9CC9AC', strokeWidth: 3, strokeDasharray: '2 10', strokeLinecap: 'round', style: { animation: 'fv-dash 1.1s linear infinite' } }),
+      h('path', { d: 'M0 84 C 60 32, 140 30, 196 68', fill: 'none', stroke: '#C4E2CF', strokeWidth: 2, strokeDasharray: '2 12', strokeLinecap: 'round', style: { animation: 'fv-dash 1.5s linear infinite' } }));
+    const spark = (l, t, s, d, k) => h('svg', { key: k, viewBox: '0 0 24 24', style: { position: 'absolute', left: l, top: t, width: s, animation: 'fv-twinkle ' + d + 's ease-in-out infinite' } },
+      h('path', { d: 'M12 0 C13 7 17 11 24 12 C17 13 13 17 12 24 C11 17 7 13 0 12 C7 11 11 7 12 0 Z', fill: '#7FC29B' }));
+    const glow = h('div', { style: { position: 'absolute', left: '30%', top: '-6%', width: '75%', height: '110%', background: 'radial-gradient(ellipse at center, rgba(47,148,97,0.10), transparent 68%)' } });
+    this._fv = h('div', { style: { position: 'absolute', inset: 0 } }, glow, laptop, arc, flyCard('41%', 0, 1), flyCard('55%', 1.6, 2), flyCard('69%', 3.2, 3), phone, spark('68%', '19%', 14, 3.4, 's1'), spark('92%', '86%', 11, 4.2, 's2'), spark('40%', '25%', 9, 5, 's3'));
+    return this._fv;
+  }
+  buildIllos() {
+    if (this._illos) return this._illos;
+    const h = React.createElement;
+    const BD = '#DCE8DF', TX = '#1F2D24', SUB = '#44554A', MUT = '#7C9084', GR = '#2F9461', DK = '#1F6B45', OR = '#EA7A1F';
+    const stack = (gap, ...kids) => h('div', { style: { display: 'flex', flexDirection: 'column', gap: gap } }, ...kids);
+    const card = (style, ...kids) => h('div', { style: Object.assign({ background: '#fff', border: '1px solid ' + BD, borderRadius: 10, boxShadow: '0 6px 16px rgba(31,45,36,0.07)' }, style) }, ...kids);
+    const chip = (t, fg, bg, bc) => h('div', { style: { alignSelf: 'flex-start', fontSize: 9.5, fontWeight: 900, lineHeight: 1, color: fg, background: bg, border: '1px solid ' + bc, borderRadius: 100, padding: '4px 10px', whiteSpace: 'nowrap' } }, t);
+    const okIcon = (s, anim) => h('svg', { viewBox: '0 0 24 24', style: { width: s, height: s, flex: 'none', marginTop: 2, animation: anim } },
+      h('path', { d: 'M4 13 l6 6 L20 6', fill: 'none', stroke: GR, strokeWidth: 3.4, strokeLinecap: 'round', strokeLinejoin: 'round' }));
+    const ngIcon = (s) => h('svg', { viewBox: '0 0 24 24', style: { width: s, height: s, flex: 'none', marginTop: 2 } },
+      h('path', { d: 'M6 6 L18 18 M18 6 L6 18', fill: 'none', stroke: '#B6C3BA', strokeWidth: 3.2, strokeLinecap: 'round' }));
+    const bullet = (t, ok) => h('div', { style: { display: 'flex', alignItems: 'flex-start', gap: 7 } },
+      ok ? okIcon(11) : ngIcon(11),
+      h('span', { style: { fontSize: 11, fontWeight: 700, lineHeight: 1.55, color: ok ? SUB : MUT } }, t));
+    const flowArrow = (label) => h('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5 } },
+      h('div', { style: { background: DK, color: '#fff', fontSize: 11, fontWeight: 900, lineHeight: 1.4, borderRadius: 100, padding: '7px 14px', textAlign: 'center' } }, label),
+      h('svg', { viewBox: '0 0 24 24', style: { width: 15, height: 15, display: 'block' } },
+        h('path', { d: 'M12 3 L12 17 M6 11.5 L12 18.5 L18 11.5', fill: 'none', stroke: '#9CC9AC', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' })));
+    const footer = (t) => h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, background: DK, borderRadius: 8, padding: '11px 12px' } },
+      h('svg', { viewBox: '0 0 24 24', style: { width: 13, height: 13, flex: 'none' } },
+        h('path', { d: 'M12 0 C13 7 17 11 24 12 C17 13 13 17 12 24 C11 17 7 13 0 12 C7 11 11 7 12 0 Z', fill: '#8FE0B4' })),
+      h('div', { style: { fontSize: 11.5, fontWeight: 900, color: '#fff', lineHeight: 1.5 } }, t));
+    const note = (t) => h('div', { style: { fontSize: 9.5, fontWeight: 500, color: MUT, lineHeight: 1.5, textAlign: 'right' } }, t);
+
+    // POINT 01: 求人票1枚 → AIが選定 → 100媒体以上へ配信
+    const jobDoc = card({ padding: '12px 13px', display: 'flex', alignItems: 'center', gap: 11 },
+      h('div', { style: { flex: 'none', width: 36, height: 36, borderRadius: 9, background: 'linear-gradient(135deg,#7FC29B,#2F9461)', display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+        h('svg', { viewBox: '0 0 24 24', style: { width: 18, height: 18 } },
+          h('path', { d: 'M6 3 h8 l4 4 v14 h-12 z', fill: 'none', stroke: '#fff', strokeWidth: 1.9, strokeLinejoin: 'round' }),
+          h('path', { d: 'M9 12 h6 M9 16 h4', fill: 'none', stroke: '#fff', strokeWidth: 1.9, strokeLinecap: 'round' }))),
+      h('div', { style: { minWidth: 0 } },
+        h('div', { style: { fontSize: 12.5, fontWeight: 900, color: TX, lineHeight: 1.4 } }, '調理スタッフ／正社員'),
+        h('div', { style: { fontSize: 10.5, fontWeight: 500, color: MUT, lineHeight: 1.4, marginTop: 3 } }, '用意する求人票は、この1枚だけ')));
+    const MEDIA = [['求人検索エンジン', '#2F9461'], ['求人ポータル', '#4CA876'], ['アグリゲーター', '#6FB98D'], ['地域特化媒体', '#8CC3A2']];
+    const tile = (i) => h('div', { key: 'm' + i, style: { background: '#fff', border: '1px solid ' + BD, borderRadius: 8, padding: '9px 9px', display: 'flex', alignItems: 'center', gap: 6, boxShadow: '0 3px 9px rgba(31,45,36,0.05)' } },
+      h('span', { style: { flex: 'none', width: 7, height: 7, borderRadius: 2, background: MEDIA[i][1] } }),
+      h('span', { style: { flex: 1, minWidth: 0, fontSize: 10.5, fontWeight: 700, color: SUB, lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, MEDIA[i][0]),
+      okIcon(11, 'pt-tick 5.5s ease ' + (0.3 + i * 0.35) + 's infinite both'));
+    const mediaGrid = h('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 7 } }, [0, 1, 2, 3].map(tile));
+    const morePill = h('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, background: '#fff', border: '1px dashed #A9D2B8', borderRadius: 8, padding: '10px' } },
+      h('span', { style: { fontSize: 12.5, fontWeight: 900, color: GR, lineHeight: 1 } }, '＋ ほか100媒体以上'),
+      h('span', { style: { fontSize: 10.5, fontWeight: 700, color: MUT, lineHeight: 1 } }, 'にも自動配信'));
+    const illo1 = stack(10, jobDoc, flowArrow('AIが業種データから配信先を選定'), mediaGrid, morePill);
+
+    // POINT 02: 応募が集まる曜日を見つけて、その直前に出稿
+    const DAY = [['月', 26, 0], ['火', 31, 0], ['水', 24, 0], ['木', 58, 1], ['金', 67, 1], ['土', 35, 0], ['日', 19, 0]];
+    const DMAX = 67;
+    const dayBar = (d, i) => h('div', { key: 'b' + i, style: { flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', height: 86 } },
+      h('div', { style: { width: '58%', height: Math.round(d[1] / DMAX * 68), display: 'flex', alignItems: 'flex-end' } },
+        h('div', { style: { position: 'relative', width: '100%', height: '100%', borderRadius: '3px 3px 0 0', background: d[2] ? 'linear-gradient(180deg,#3AA26C,#2F9461)' : '#D3E5DA', animation: 'pt-rise 5.5s ease ' + (i * 0.13) + 's infinite both' } },
+          h('div', { style: { position: 'absolute', left: -6, right: -6, bottom: '100%', marginBottom: 4, textAlign: 'center', fontSize: 9.5, fontWeight: d[2] ? 900 : 700, lineHeight: 1, color: d[2] ? OR : '#9DB3A5' } }, d[1]))));
+    const dayLabel = (d, i) => h('div', { key: 'l' + i, style: { flex: 1, minWidth: 0, textAlign: 'center', fontSize: 10, lineHeight: 1, fontWeight: d[2] ? 900 : 500, color: d[2] ? OR : MUT } }, d[0]);
+    const chartCard = card({ padding: '12px 12px 11px' },
+      h('div', { style: { display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginBottom: 6 } },
+        h('span', { style: { fontSize: 11.5, fontWeight: 900, color: TX, lineHeight: 1 } }, '曜日別の応募数'),
+        h('span', { style: { fontSize: 9.5, fontWeight: 700, color: MUT, lineHeight: 1 } }, '同業種の配信データ')),
+      h('div', { style: { display: 'flex', alignItems: 'flex-end', gap: 3, borderBottom: '2px solid #E2ECE5' } }, DAY.map(dayBar)),
+      h('div', { style: { display: 'flex', gap: 3, marginTop: 6 } }, DAY.map(dayLabel)),
+      h('div', { style: { marginTop: 10, display: 'flex', alignItems: 'center', gap: 7, background: '#FFF4E8', border: '1px solid #F7D9B4', borderRadius: 7, padding: '8px 10px' } },
+        h('svg', { viewBox: '0 0 24 24', style: { width: 13, height: 13, flex: 'none' } },
+          h('circle', { cx: 12, cy: 12, r: 9.5, fill: 'none', stroke: OR, strokeWidth: 2.4 }),
+          h('path', { d: 'M12 6.5 v6 l4 2.6', fill: 'none', stroke: OR, strokeWidth: 2.4, strokeLinecap: 'round' })),
+        h('div', { style: { fontSize: 11, fontWeight: 900, color: '#B5600F', lineHeight: 1.5 } }, '木・金に応募が集中 → その直前に出稿')));
+    const illo2 = stack(10, chartCard, footer('曜日・時間帯の見極めも出稿も、AIが自動で調整'), note('※ グラフは同業種データをもとにしたイメージです'));
+
+    // POINT 03: よくある求人票 → プロのライターが書き直し
+    const beforeCard = h('div', { style: { background: '#F5F8F6', border: '1px solid #E1E9E4', borderRadius: 10, padding: '12px 13px', display: 'flex', flexDirection: 'column', gap: 8 } },
+      chip('よくある求人票', '#8A9A90', '#fff', '#E1E9E4'),
+      h('div', { style: { fontSize: 12, fontWeight: 700, color: '#8A9A90', lineHeight: 1.65, whiteSpace: 'pre-line' } }, '調理スタッフ募集／未経験歓迎\n給与・待遇は面談時にご説明します'),
+      bullet('条件が分からず、応募を見送られる', false));
+    const afterCard = h('div', { style: { background: '#fff', border: '2px solid ' + GR, borderRadius: 10, padding: '13px 13px', display: 'flex', flexDirection: 'column', gap: 9, animation: 'pt-glow 4.2s ease-in-out infinite' } },
+      chip('WORKLの求人票', '#fff', GR, GR),
+      h('div', { style: { fontSize: 12.5, fontWeight: 900, color: TX, lineHeight: 1.6, whiteSpace: 'pre-line' } }, '【完全週休2日・17時退社】\n調理スタッフ｜月給28万円〜'),
+      h('div', { style: { display: 'flex', flexDirection: 'column', gap: 6, borderTop: '1px solid #EAF1EB', paddingTop: 9 } },
+        bullet('求職者が最初に見る条件を先頭に', true),
+        bullet('未経験からのキャリア例まで明記', true),
+        bullet('応募データを見ながら毎月改善', true)));
+    const illo3 = stack(10, beforeCard, flowArrow('プロのライターが書き直し'), afterCard, footer('1万事業所の応募データをもとに作成・改善します'), note('※ 求人票の内容は表示イメージです'));
+
+    this._illos = [illo1, illo2, illo3];
+    return this._illos;
+  }
+  toggle(i) {
+    this.setState(s => ({ open: { ...s.open, [i]: !s.open[i] } }));
+  }
+  renderVals() {
+    const allOpen = this.props.faqAllOpen ?? false;
+    const stickyOn = this.props.stickyBar ?? true;
+    const illos = this.buildIllos();
+    return {
+      fvIllustration: this.buildFV(),
+      logoSlots: Array.from({ length: 6 }, (_, i) => i),
+      industries: ['SES', '飲食店', '人材派遣業', '現場作業・建築業', '介護', '運輸', '小売', '製造', '物流', '保険 ほか'],
+      points: [
+        { num: '01', title: 'AIが100媒体以上に自動出稿', desc: '業種ごとに成果の出ている媒体へ、AIが自動で出稿。担当者が媒体を選ぶ作業は不要です。', illo: illos[0] },
+        { num: '02', title: '最適タイミングで出稿できる', desc: '求職者の動きに合わせて、応募が集まりやすいタイミングでAIが出稿を調整します。', illo: illos[1] },
+        { num: '03', title: 'プロのライターが求人票を代行作成', desc: '1万事業所の支援実績をもとに、プロのライターが求人票を代行作成。WORKL独自のノウハウで、応募データを見ながら反応の出る求人票に仕上げます。', illo: illos[2] }
+      ],
+      cases: [
+        { industry: 'SES', title: '紹介手数料ゼロで採用', price: '1,000円', problem: '高額な人材紹介会社に依存している', solution: '言語・領域別に求人票を分け、多数応募を獲得' },
+        { industry: '飲食店', title: '最短即日で募集再開', price: '1,000円', problem: '入れ替わりが激しく、常に求人が必要', solution: '欠員が出たら、スマホから過去の求人を再公開' },
+        { industry: '人材派遣業', title: '採用単価ダウン＆応募増', price: '2,000円', problem: '媒体費（枠代）がかさみ、利益が出ない', solution: '定額制を生かし、エリア・職種別に大量展開' },
+        { industry: '現場作業・建築業', title: '面接設定率が向上', price: '5,000円', problem: '現場に出ていて、応募者に対応できない', solution: '応募直後の自動返信で、作業中も面接が決まる' }
+      ],
+      faqs: this.faqData.map((f, i) => {
+        const open = allOpen || !!this.state.open[i];
+        return { ...f, open, icon: open ? '−' : '＋', toggle: () => this.toggle(i) };
+      }),
+      showSticky: stickyOn && this.state.showSticky
+    };
+  }
+}
+</script>
+</body>
+</html>

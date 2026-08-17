@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>資料ダウンロード完了｜WORKL</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+@keyframes tx-pop{0%{opacity:0;transform:scale(.5)}60%{transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes tx-draw{to{stroke-dashoffset:0}}
+@keyframes tx-ring{0%{box-shadow:0 0 0 0 rgba(47,148,97,.35)}70%{box-shadow:0 0 0 22px rgba(47,148,97,0)}100%{box-shadow:0 0 0 0 rgba(47,148,97,0)}}
+@keyframes tx-ping{0%{box-shadow:0 0 0 0 rgba(234,122,31,.5)}70%{box-shadow:0 0 0 14px rgba(234,122,31,0)}100%{box-shadow:0 0 0 0 rgba(234,122,31,0)}}
+body{margin:0;font-family:'Noto Sans JP',sans-serif;color:#1F2D24;background:#E9F0EA;-webkit-font-smoothing:antialiased}
+a{color:#2F9461;text-decoration:none}
+a:hover{color:#25784E}
+</style>
+</helmet>
+
+<div style="max-width:480px;margin:0 auto;background:#fff;box-shadow:0 0 44px rgba(31,45,36,0.10);position:relative">
+
+<header data-screen-label="01 ヘッダー" style="background:#fff;border-bottom:1px solid #E2ECE5">
+  <div style="padding:14px 20px;display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center">
+    <img src="./uploads/logo.png" alt="WORKL ワークル" style="height:32px;width:auto;display:block">
+    <div style="font-size:9px;color:#5E7266;font-weight:500">AIで100媒体以上に自動配信する採用支援ツール</div>
+  </div>
+</header>
+
+<section data-screen-label="02 完了メッセージ" style="position:relative;overflow:hidden;background:linear-gradient(150deg,#F7FBF8 0%,#EAF4ED 55%,#DFEFE5 100%);border-bottom:1px solid #E2ECE5">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 380" preserveAspectRatio="xMidYMid slice">
+    <circle cx="-30" cy="60" r="110" fill="none" stroke="#CBE5D4" stroke-width="1.5"></circle>
+    <circle cx="400" cy="330" r="120" fill="none" stroke="#C4E2CF" stroke-width="1.5"></circle>
+    <path d="M60 300 l9 9 m0 -9 l-9 9" stroke="#A9D2B8" stroke-width="2"></path>
+    <path d="M340 60 h3 v7 h7 v3 h-7 v7 h-3 v-7 h-7 v-3 h7 z" fill="#9CC9AC"></path>
+  </svg>
+  <div style="position:relative;padding:44px 20px 40px;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+    <div style="flex:none;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#3FA771,#268050);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(31,107,69,0.28);animation:tx-pop .5s ease-out both,tx-ring 2.6s ease-out .5s infinite">
+      <svg viewBox="0 0 24 24" style="width:32px;height:32px;display:block"><path d="M4 12.5 L9.5 18 L20 7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" stroke-dashoffset="30" style="animation:tx-draw .45s ease-out .35s forwards"></path></svg>
+    </div>
+    <h1 style="margin:0;font-size:23px;font-weight:900;line-height:1.6;letter-spacing:0.01em">資料のご請求を<br>受け付けました</h1>
+    <p style="margin:0;font-size:14px;font-weight:700;line-height:1.9;color:#1F2D24">ご入力のメールアドレスに、<br>資料をお送りしています。</p>
+    <div style="width:100%;background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;text-align:left;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+      <svg viewBox="0 0 24 24" style="flex:none;width:18px;height:18px;display:block;margin-top:1px"><circle cx="12" cy="12" r="10" fill="#EA7A1F"></circle><path d="M12 6.5 L12 13.5 M12 16.2 L12 17.6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"></path></svg>
+      <div style="font-size:12.5px;line-height:1.9;color:#44554A">数分経ってもメールが届かない場合は、<span style="font-weight:900;color:#1F2D24">迷惑メールフォルダ</span>をご確認ください。</div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 代表メッセージ" style="position:relative;overflow:hidden;background:#fff">
+  <div style="position:relative;padding:48px 20px 44px">
+    <h2 style="margin:0 0 24px;padding-left:15px;border-left:4px solid #2F9461;font-size:20px;font-weight:900;line-height:1.8;letter-spacing:0.01em">採用にかけたお金が、<br><span style="background:linear-gradient(transparent 60%,#FFE06B 60%)">無風で終わる会社</span>をなくしたい。</h2>
+    <div style="overflow:hidden">
+      <figure style="float:right;width:124px;margin:3px 0 12px 18px;display:flex;flex-direction:column;gap:11px;align-items:center;text-align:center">
+        <img src="./uploads/ceo-takada.jpg" alt="株式会社キープサーチ 代表取締役CEO 高田 啓貴" style="width:124px;height:148px;object-fit:cover;object-position:center 20%;border-radius:8px;display:block;box-shadow:0 8px 20px rgba(31,45,36,0.16)">
+        <figcaption style="display:flex;flex-direction:column;gap:4px;width:100%">
+          <span style="font-size:11px;font-weight:700;color:#5E7266">株式会社キープサーチ</span>
+          <span style="font-size:11px;font-weight:700;color:#5E7266">代表取締役CEO</span>
+          <span style="font-size:16px;font-weight:900;color:#1F2D24;line-height:1.4">高田 啓貴</span>
+          <span style="font-size:10px;font-weight:700;color:#7C9084;letter-spacing:0.04em">Takada Hiroki</span>
+        </figcaption>
+      </figure>
+      <p style="margin:0 0 22px;font-size:13px;line-height:2;color:#5E7266">「採用にお金をかけているのに、応募が来ない」<br>求人媒体の営業として現場を回っていた頃、最も多く聞いた言葉でした。</p>
+      <p style="margin:0 0 22px;font-size:13.5px;font-weight:700;line-height:2;color:#1F2D24">問題は予算の額ではなく、<span style="font-weight:900;background:linear-gradient(transparent 62%,#FFE06B 62%)">出す場所が合っていないこと</span>。ただそれだけで、同じ予算でも応募数は何倍も変わります。だから私たちは、100を超える媒体から成果の出る一社を選び続ける判断を、AIに任せる仕組みをつくりました。登録するのは求人原稿1本だけです。</p>
+      <p style="margin:0;font-size:13.5px;font-weight:700;line-height:2;color:#1F2D24">30分のお打ち合わせ時間は<br>決して無駄にしませんので、<br>以下をご確認してみてください。</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="04 限定特典" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2F9461 0%,#268050 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 560" preserveAspectRatio="xMidYMid slice">
+    <circle cx="380" cy="70" r="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <circle cx="10" cy="500" r="110" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <path d="M60 60 l9 9 m0 -9 l-9 9" stroke="rgba(255,255,255,0.3)" stroke-width="2"></path>
+  </svg>
+  <div style="position:relative;padding:0 0 44px;display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center">
+    <h2 style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">今だけ 打ち合わせをご予約の方 限定｜採用単価 無料診断レポートをプレゼント</h2>
+    <img src="./uploads/cta-report-banner.png" alt="期間限定 あなたの業種だと採用単価はいくらが適正？ 採用単価の無料診断レポート プレゼント中" style="display:block;width:100%;height:auto">
+    <div style="width:100%;padding:0 20px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px;align-items:center">
+    <div style="display:flex;align-items:center;gap:7px;background:#EA7A1F;color:#fff;border-radius:100px;padding:7px 16px;box-shadow:0 6px 14px rgba(0,0,0,0.18);animation:tx-ping 2.8s ease-out infinite">
+      <span style="font-size:12px;font-weight:900;letter-spacing:0.02em;white-space:nowrap">今だけ</span>
+      <span style="display:block;width:1px;height:11px;background:rgba(255,255,255,0.5)"></span>
+      <span style="font-size:11px;font-weight:700;white-space:nowrap">打ち合わせをご予約の方 限定</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;width:100%">
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;text-align:left;box-shadow:0 6px 16px rgba(0,0,0,0.12)">
+        <div style="flex:none;width:20px;height:20px;border-radius:50%;background:#EA7A1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.75;color:#1F2D24">貴社の職種・エリアで、<span style="background:linear-gradient(transparent 60%,#FFE06B 60%);font-weight:900">いま応募が取れている媒体</span>をレポート</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;text-align:left;box-shadow:0 6px 16px rgba(0,0,0,0.12)">
+        <div style="flex:none;width:20px;height:20px;border-radius:50%;background:#EA7A1F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.75;color:#1F2D24">現在の採用費から、<span style="background:linear-gradient(transparent 60%,#FFE06B 60%);font-weight:900">WORKL導入後の想定応募単価</span>を試算</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="05 対象者" style="position:relative;overflow:hidden;background:linear-gradient(160deg,#F3F8F4 0%,#EAF3EC 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 560" preserveAspectRatio="xMidYMid slice">
+    <circle cx="30" cy="500" r="110" fill="none" stroke="#CFE7D8" stroke-width="1.5"></circle>
+    <circle cx="380" cy="50" r="90" fill="none" stroke="#CFE7D8" stroke-width="1.5"></circle>
+    <path d="M340 470 l9 9 m0 -9 l-9 9" stroke="#A9D2B8" stroke-width="2"></path>
+  </svg>
+  <div style="position:relative;padding:48px 20px;display:flex;flex-direction:column;gap:24px;align-items:center">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">TARGET</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <h2 style="margin:0;font-size:20px;font-weight:900;line-height:1.65">こんな課題を抱えていた企業様から<br>特に<span style="background:linear-gradient(transparent 60%,#FFE06B 60%)">ご好評いただいています</span></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;width:100%">
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+        <div style="flex:none;width:19px;height:19px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.7"><span style="color:#2F9461;font-weight:900">月20万円以上</span>かけているのに、応募がほとんど来ていない</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+        <div style="flex:none;width:19px;height:19px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.7">どの媒体に出せば成果が出るのか、判断できていない</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+        <div style="flex:none;width:19px;height:19px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.7">媒体ごとの入稿・調整に、<span style="color:#2F9461;font-weight:900">毎月何時間も</span>取られている</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+        <div style="flex:none;width:19px;height:19px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.7">成果報酬型で、1名採用するたびに大きな費用が出ている</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E2ECE5;border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(30,42,56,0.05)">
+        <div style="flex:none;width:19px;height:19px;border-radius:50%;background:#2F9461;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;margin-top:2px">✓</div>
+        <div style="font-size:13.5px;font-weight:700;line-height:1.7">今すぐ人が必要で、採用を止められない</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="06 最終CTA" style="position:relative;overflow:hidden;background:linear-gradient(135deg,#2F9461 0%,#268050 100%)">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 390 520" preserveAspectRatio="xMidYMid slice">
+    <circle cx="20" cy="470" r="110" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <circle cx="390" cy="40" r="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"></circle>
+    <path d="M60 50 l9 9 m0 -9 l-9 9" stroke="rgba(255,255,255,0.3)" stroke-width="2"></path>
+    <g fill="rgba(255,255,255,0.25)">
+      <circle cx="330" cy="430" r="2"></circle><circle cx="345" cy="430" r="2"></circle><circle cx="360" cy="430" r="2"></circle>
+      <circle cx="330" cy="445" r="2"></circle><circle cx="345" cy="445" r="2"></circle><circle cx="360" cy="445" r="2"></circle>
+    </g>
+  </svg>
+  <div style="position:relative;padding:48px 20px 52px;display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center">
+    <div style="background:#fff;border-radius:100px;padding:7px 18px;font-size:12px;font-weight:900;color:#1F6B45;white-space:nowrap">元Indeedトップセールス監修</div>
+    <h2 style="margin:0;font-size:23px;font-weight:900;color:#fff;line-height:1.6">コストを大幅に削減して<br>理想の人材を採用しませんか？</h2>
+    <p style="margin:0;font-size:13px;line-height:1.9;color:#D6E6DB">カレンダーから選ぶだけ。<br><span style="color:#fff;font-weight:900">30分</span>で、貴社の採用単価がどこまで下がるか分かります。</p>
+    <a href="#calendar" data-cta="cta_thanks_calendar" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#EA7A1F;color:#fff;border-radius:10px;padding:20px 24px;box-shadow:0 4px 0 #C25E0B,0 10px 24px rgba(0,0,0,0.18);width:100%;box-sizing:border-box;margin-top:4px" style-hover="background:#D96C10;color:#fff">
+      <svg viewBox="0 0 24 24" style="flex:none;width:17px;height:17px;display:block"><path d="M8 5 L19 12 L8 19 Z" fill="#fff"></path></svg>
+      <span style="font-size:19px;font-weight:900;letter-spacing:0.01em;white-space:nowrap">今すぐ日程調整をする</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:6px;color:#D6E6DB;font-size:11.5px;font-weight:700">
+      <svg viewBox="0 0 24 24" style="flex:none;width:13px;height:13px;display:block"><path d="M4 12.5 L9.5 18 L20 7" fill="none" stroke="#8FE0B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>無理な営業は一切いたしません</span>
+    </div>
+  </div>
+</section>
+
+<section id="calendar" data-screen-label="07 日程調整カレンダー" style="background:#fff;scroll-margin-top:16px">
+  <div style="padding:44px 20px;display:flex;flex-direction:column;gap:18px;align-items:center">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="display:block;width:24px;height:2px;background:#2F9461"></span><span style="font-size:12px;font-weight:700;letter-spacing:0.22em;color:#2F9461">RESERVE</span><span style="display:block;width:24px;height:2px;background:#2F9461"></span></div>
+      <h2 style="margin:0;font-size:19px;font-weight:900;line-height:1.6">ご都合のよい日時を<br>お選びください</h2>
+      <p style="margin:0;font-size:12.5px;line-height:1.9;color:#5E7266">所要時間30分／オンライン（Google Meet）</p>
+    </div>
+    <div id="calendar-area" style="width:100%;background:#fff;border:1px solid #E2ECE5;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(31,45,36,0.07)">
+      <div style="background:#F6FAF7;border-bottom:1px solid #E2ECE5;padding:12px 16px;display:flex;align-items:center;gap:8px">
+        <svg viewBox="0 0 24 24" style="flex:none;width:16px;height:16px;display:block"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="#2F9461" stroke-width="2"></rect><path d="M3 10 H21 M8 3 V6 M16 3 V6" fill="none" stroke="#2F9461" stroke-width="2" stroke-linecap="round"></path></svg>
+        <span style="font-size:14px;font-weight:900;color:#1F2D24">WEB会議予約</span>
+      </div>
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ZcrXgrvhIVVxsDTZq3KOej7mPQQt5ZC4ggdAsJ4NGdK2i_IMvzxOP4ttDfGng9WalzF_7qPwm?gv=true" title="WEB会議予約カレンダー" loading="lazy" width="100%" height="700" frameborder="0" style="border:0;display:block;width:100%;height:700px"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="08 フッター" style="background:#142A1F">
+  <div style="padding:36px 20px 28px;display:flex;flex-direction:column;gap:22px">
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+      <div style="background:#fff;border-radius:8px;padding:7px 12px"><img src="./uploads/logo.png" alt="WORKL ワークル" style="height:28px;display:block"></div>
+      <div style="font-size:11px;color:#93AC9C">AIで100媒体以上に自動配信する採用支援ツール</div>
+    </div>
+    <div style="border-top:1px solid #2A4A3A;padding-top:18px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="https://www.keep-search.co.jp/company/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">会社概要</a>
+        <a href="https://www.keep-search.co.jp/policy/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">プライバシーポリシー</a>
+        <a href="https://www.keep-search.co.jp/laws/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">個人情報保護方針</a>
+        <a href="https://www.keep-search.co.jp/security/" target="_blank" rel="noopener" style="font-size:11px;color:#93AC9C;white-space:nowrap" style-hover="color:#fff">情報セキュリティ基本方針</a>
+      </div>
+      <div style="font-size:11px;color:#93AC9C">© WORKL</div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}">
+class Component extends DCLogic {
+  state = {};
+}
+</script>
+</body>
+</html>
