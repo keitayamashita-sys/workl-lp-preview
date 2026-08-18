@@ -63,11 +63,11 @@ select.f-in option[value=""]{color:#A7B6AC}
       <h2 style="margin:0;font-size:22px;font-weight:900;line-height:1.6">3分で分かる資料を<br><span style="background:linear-gradient(transparent 60%,#FFE06B 60%)">無料ダウンロード</span></h2>
       <p style="margin:0;font-size:12.5px;line-height:1.9;color:#5E7266">下記フォームにご入力ください。<br>ご入力のメールアドレスへ、すぐに資料をお送りします。</p>
     </div>
-    <form onSubmit="{{ onSubmit }}" action="/contact/" method="post" style="background:#fff;border:1px solid #E2ECE5;border-radius:14px;padding:24px 18px;box-shadow:0 8px 22px rgba(31,45,36,0.08);display:flex;flex-direction:column;gap:20px">
+    <form onSubmit="{{ onSubmit }}" action="/contact/" method="post" noValidate="noValidate" style="background:#fff;border:1px solid #E2ECE5;border-radius:14px;padding:24px 18px;box-shadow:0 8px 22px rgba(31,45,36,0.08);display:flex;flex-direction:column;gap:20px">
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-issue" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">現在の課題<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <select id="f-issue" name="issue" required class="f-in">
+        <select id="f-issue" name="issue" required="required" class="f-in">
           <option value="">選択してください</option>
           <option>媒体に出稿しても応募が集まらない</option>
           <option>採用コスト（媒体費・紹介手数料）が高い</option>
@@ -82,7 +82,7 @@ select.f-in option[value=""]{color:#A7B6AC}
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-interest" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">興味を持ったポイント<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <select id="f-interest" name="interest" required class="f-in">
+        <select id="f-interest" name="interest" required="required" class="f-in">
           <option value="">選択してください</option>
           <option>AIが100媒体以上へ自動出稿してくれる</option>
           <option>応募単価1,000円の実績</option>
@@ -96,23 +96,23 @@ select.f-in option[value=""]{color:#A7B6AC}
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-company" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">会社名<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <input id="f-company" name="company" type="text" required autocomplete="organization" placeholder="例）株式会社キープサーチ" class="f-in">
+        <input id="f-company" name="company" type="text" required="required" autocomplete="organization" placeholder="例）株式会社キープサーチ" class="f-in">
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-name" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">お名前<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="例）山田 太郎" class="f-in">
+        <input id="f-name" name="name" type="text" required="required" autocomplete="name" placeholder="例）山田 太郎" class="f-in">
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-email" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">メールアドレス<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="例）yamada@example.co.jp" class="f-in">
+        <input id="f-email" name="email" type="email" required="required" autocomplete="email" inputmode="email" placeholder="例）yamada@example.co.jp" class="f-in">
         <p style="margin:0;font-size:11px;line-height:1.8;color:#5E7266">※ こちらのアドレスへ資料をお送りします。キャリアメール（docomo・au・softbank）は受信できない場合があるため、<span style="font-weight:900;color:#1F2D24">会社・PCのメールアドレス</span>を推奨します。</p>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="f-tel" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:900;color:#1F2D24">電話番号<span style="flex:none;font-size:10px;font-weight:900;color:#fff;background:#EA7A1F;border-radius:3px;padding:3px 6px;line-height:1">必須</span></label>
-        <input id="f-tel" name="tel" type="tel" required autocomplete="tel" inputmode="numeric" pattern="[0-9０-９\-ー－\s]{10,20}" placeholder="例）0312345678" class="f-in">
+        <input id="f-tel" name="tel" type="tel" required="required" autocomplete="tel" inputmode="numeric" pattern="[0-9０-９\-ー－\s]{10,20}" placeholder="例）0312345678" class="f-in">
         <p style="margin:0;font-size:11px;line-height:1.8;color:#5E7266">※ ハイフンなしでご入力いただけます。</p>
       </div>
 
@@ -161,12 +161,101 @@ select.f-in option[value=""]{color:#A7B6AC}
 class Component extends DCLogic {
   state = { sending: false };
   renderVals() {
+    // 必須項目の定義（name属性 → ラベル／入力形式）
+    const FIELDS = [
+      { name: 'issue',    label: '現在の課題',           type: 'select' },
+      { name: 'interest', label: '興味を持ったポイント', type: 'select' },
+      { name: 'company',  label: '会社名',               type: 'text'   },
+      { name: 'name',     label: 'お名前',               type: 'text'   },
+      { name: 'email',    label: 'メールアドレス',       type: 'email'  },
+      { name: 'tel',      label: '電話番号',             type: 'tel'    }
+    ];
+
+    // 既存のエラー表示をすべて消す
+    const clearErrors = (form) => {
+      form.querySelectorAll('[data-err]').forEach((el) => el.remove());
+      FIELDS.forEach((f) => {
+        const el = form.elements[f.name];
+        if (el) { el.style.borderColor = ''; el.style.boxShadow = ''; }
+      });
+    };
+
+    // 1項目分のエラーを表示
+    const showError = (el, message) => {
+      el.style.borderColor = '#D93A2B';
+      el.style.boxShadow = '0 0 0 3px rgba(217,58,43,0.14)';
+      const p = document.createElement('p');
+      p.setAttribute('data-err', '');
+      p.style.cssText = 'margin:0;font-size:11.5px;font-weight:700;line-height:1.7;color:#D93A2B';
+      p.textContent = message;
+      el.insertAdjacentElement('afterend', p);
+    };
+
+    // 入力し直したらエラー表示を消す
+    const bindClear = (el) => {
+      if (el.dataset.errBound) return;
+      el.dataset.errBound = '1';
+      const reset = () => {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+        const next = el.nextElementSibling;
+        if (next && next.hasAttribute('data-err')) next.remove();
+      };
+      el.addEventListener('input', reset);
+      el.addEventListener('change', reset);
+    };
+
+    const validate = (form) => {
+      clearErrors(form);
+      let firstInvalid = null;
+
+      FIELDS.forEach((f) => {
+        const el = form.elements[f.name];
+        if (!el) return;
+        bindClear(el);
+        const value = String(el.value || '').trim();
+        let message = '';
+
+        if (!value) {
+          message = f.type === 'select'
+            ? f.label + 'を選択してください'
+            : f.label + 'を入力してください';
+        } else if (f.type === 'email') {
+          if (!/^[^\s@]+@[^\s@,]+\.[A-Za-z]{2,}$/.test(value)) {
+            message = 'メールアドレスの形式が正しくありません（例：yamada@example.co.jp）';
+          }
+        } else if (f.type === 'tel') {
+          const digits = value.replace(/[^0-9０-９]/g, '').length;
+          if (digits < 10 || digits > 11) {
+            message = '電話番号は10〜11桁の数字でご入力ください（例：0312345678）';
+          }
+        }
+
+        if (message) {
+          showError(el, message);
+          if (!firstInvalid) firstInvalid = el;
+        }
+      });
+
+      if (firstInvalid) {
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        try { firstInvalid.focus({ preventScroll: true }); } catch (err) { firstInvalid.focus(); }
+        return false;
+      }
+      return true;
+    };
+
     return {
       onSubmit: (e) => {
         e.preventDefault();
+        const form = e.currentTarget || e.target;
+
+        // 必須未入力・形式エラーがある場合はここで停止（thanks.html へ進まない）
+        if (!validate(form)) return;
+
         if (this.state.sending) return;
         this.setState({ sending: true });
-        const data = Object.fromEntries(new FormData(e.target).entries());
+        const data = Object.fromEntries(new FormData(form).entries());
 
         // ▼▼▼ 送信処理（要設定）▼▼▼
         // 現在はデータをどこにも送信していません。フォームツール（formrun / HubSpot 等）
