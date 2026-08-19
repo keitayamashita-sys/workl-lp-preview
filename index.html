@@ -21,6 +21,14 @@ html{scroll-behavior:smooth}
 @keyframes pt-tick{0%,6%{opacity:0;transform:scale(.5)}18%,94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.5)}}
 @keyframes pt-rise{0%,10%{height:6%}42%,94%{height:100%}100%{height:6%}}
 @keyframes pt-glow{0%,100%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 0 rgba(47,148,97,0)}50%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 5px rgba(47,148,97,0.10)}}
+.logo-marquee{position:relative;width:100%;display:flex;flex-direction:column;gap:10px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%)}
+.logo-row{overflow:hidden}
+.logo-track{display:flex;width:max-content;will-change:transform;animation-name:logo-scroll;animation-timing-function:linear;animation-iteration-count:infinite}
+.logo-item{flex:none;width:104px;height:46px;margin-right:10px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #E9F0EB;border-radius:6px;padding:6px;box-sizing:border-box}
+.logo-item img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.logo-track.is-offset{margin-left:-57px}
+@keyframes logo-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media (prefers-reduced-motion:reduce){.logo-track{animation:none}}
 @media (prefers-reduced-motion:reduce){[style*="animation"]{animation:none!important}}
 body{margin:0;font-family:'Noto Sans JP',sans-serif;color:#1F2D24;background:#E9F0EA;-webkit-font-smoothing:antialiased}
 a{color:#2F9461;text-decoration:none}
@@ -83,12 +91,75 @@ select.f-in option[value=""]{color:#A7B6AC}
 </section>
 
 <section id="logos" data-screen-label="03 導入企業" style="background:#fff">
-  <div style="padding:32px 20px 40px;display:flex;flex-direction:column;gap:18px;align-items:center">
+  <div style="padding:32px 0 40px;display:flex;flex-direction:column;gap:16px;align-items:center;overflow:hidden">
     <h2 style="margin:0;font-size:15px;font-weight:700;color:#44554A">導入企業様（一部）</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%">
-      <sc-for list="{{ logoSlots }}" as="slot" hint-placeholder-count="6">
-        <div style="background:repeating-linear-gradient(45deg,#F0F6F1 0 10px,#EAF1EB 10px 20px);border:1px solid #E2ECE5;border-radius:6px;height:52px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:10px;color:#95A99B">企業ロゴ</div>
-      </sc-for>
+    <div class="logo-marquee">
+    <div class="logo-row">
+      <div class="logo-track" style="animation-duration:54s">
+        <div class="logo-item"><img src="./uploads/logos/manpowergroup.png" alt="ManpowerGroup" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kihoku-driving.png" alt="紀北自動車学校" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/uha.png" alt="UHA味覚糖" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/oriental-consultants.png" alt="株式会社オリエンタルコンサルタンツ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kansai-cycle.png" alt="関西サイクルスポーツセンター" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/oizumi-foods.png" alt="OIZUMI FOODS" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nichirei-foods.png" alt="ニチレイフーズ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/okura.png" alt="株式会社大倉" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/daido-life.png" alt="大同生命" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/fumiiwagumi.png" alt="文岩組" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/ryukyu-daihatsu.png" alt="琉球ダイハツ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nihon-kotsu.png" alt="日本交通株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/wakayama-fukushi.png" alt="和歌山県福祉事業団" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/meimon-taiyo-ferry.png" alt="名門大洋フェリー" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/uoi.png" alt="魚伊" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/manpowergroup.png" alt="ManpowerGroup" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kihoku-driving.png" alt="紀北自動車学校" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/uha.png" alt="UHA味覚糖" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/oriental-consultants.png" alt="株式会社オリエンタルコンサルタンツ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kansai-cycle.png" alt="関西サイクルスポーツセンター" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/oizumi-foods.png" alt="OIZUMI FOODS" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nichirei-foods.png" alt="ニチレイフーズ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/okura.png" alt="株式会社大倉" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/daido-life.png" alt="大同生命" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/fumiiwagumi.png" alt="文岩組" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/ryukyu-daihatsu.png" alt="琉球ダイハツ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nihon-kotsu.png" alt="日本交通株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/wakayama-fukushi.png" alt="和歌山県福祉事業団" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/meimon-taiyo-ferry.png" alt="名門大洋フェリー" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/uoi.png" alt="魚伊" decoding="async"></div>
+      </div>
+    </div>
+    <div class="logo-row">
+      <div class="logo-track is-offset" style="animation-duration:50.4s">
+        <div class="logo-item"><img src="./uploads/logos/asa.png" alt="ASA" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/sayco.png" alt="SAYCO" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/hanshin-keibi.png" alt="阪神警備保障株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kosoku.png" alt="株式会社高速" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/shinmeikai.png" alt="医療法人神明会" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/konoike.png" alt="KONOIKE GROUP" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kobe-kitcho.png" alt="神戸吉兆" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/hakkai.png" alt="八海山" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/fujisan-meisui.png" alt="富士山の銘水株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/seikatsu-club.png" alt="生活クラブ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/japan-material.png" alt="ジャパンマテリアル" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/grop.png" alt="GROP" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nishihara.png" alt="西原商会" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/tempstaff-forum.png" alt="テンプスタッフフォーラム株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/asa.png" alt="ASA" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/sayco.png" alt="SAYCO" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/hanshin-keibi.png" alt="阪神警備保障株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kosoku.png" alt="株式会社高速" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/shinmeikai.png" alt="医療法人神明会" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/konoike.png" alt="KONOIKE GROUP" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/kobe-kitcho.png" alt="神戸吉兆" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/hakkai.png" alt="八海山" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/fujisan-meisui.png" alt="富士山の銘水株式会社" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/seikatsu-club.png" alt="生活クラブ" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/japan-material.png" alt="ジャパンマテリアル" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/grop.png" alt="GROP" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/nishihara.png" alt="西原商会" decoding="async"></div>
+        <div class="logo-item"><img src="./uploads/logos/tempstaff-forum.png" alt="テンプスタッフフォーラム株式会社" decoding="async"></div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -533,7 +604,6 @@ class Component extends DCLogic {
     const illos = this.buildIllos();
     return {
       fvIllustration: this.buildFV(),
-      logoSlots: Array.from({ length: 6 }, (_, i) => i),
       industries: ['SES', '飲食店', '人材派遣業', '現場作業・建築業', '介護', '運輸', '小売', '製造', '物流', '保険 ほか'],
       points: [
         { num: '01', title: 'AIが100媒体以上に自動出稿', desc: '業種ごとに成果の出ている媒体へ、AIが自動で出稿。担当者が媒体を選ぶ作業は不要です。', illo: illos[0] },
