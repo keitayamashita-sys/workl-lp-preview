@@ -4,9 +4,31 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3X49XL2');</script>
+<!-- End Google Tag Manager -->
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+window.EMAILJS_CONFIG = {
+  serviceId:  'service_kouut8q',
+  templateId: 'template_o0g2c1q',
+  publicKey:  'sMrpSn1ML7B3wwjHE'
+};
+if (window.emailjs) { emailjs.init({ publicKey: window.EMAILJS_CONFIG.publicKey }); }
+</script>
+<!-- End EmailJS -->
 <script src="./support.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3X49XL2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <x-dc>
 <helmet>
 <title>資料ダウンロード（無料）｜WORKL</title>
@@ -73,8 +95,8 @@ select.f-in option[value=""]{color:#A7B6AC}
           <option>採用コスト（媒体費・紹介手数料）が高い</option>
           <option>採用業務に手が回らない／担当者が兼任</option>
           <option>応募は来るが、求める人材とマッチしない</option>
-          <option>応募者への対応が遅れ、面接につながらない</option>
-          <option>退職・欠員が多く、常に募集が必要</option>
+          <option>求人票の作成に手間がかかる／ノウハウがない</option>
+          <option>職種・エリアごとに募集したいが、掲載費が増える</option>
           <option>どの媒体に出せばよいか分からない</option>
           <option>まだ情報収集の段階</option>
         </select>
@@ -87,8 +109,8 @@ select.f-in option[value=""]{color:#A7B6AC}
           <option>AIが100媒体以上へ自動出稿してくれる</option>
           <option>応募単価1,000円の実績</option>
           <option>プロのライターが求人票を代行作成してくれる</option>
-          <option>応募が集まりやすいタイミングでの自動出稿</option>
-          <option>初期設定を代行してもらえる</option>
+          <option>月額定額で、求人を好きなだけ掲載できる</option>
+          <option>職種・勤務地・雇用形態ごとに1クリックで切り替えられる</option>
           <option>元Indeedトップセールス監修／10,000事業所の実績</option>
           <option>自社と同じ業種の導入事例があった</option>
         </select>
@@ -257,19 +279,85 @@ class Component extends DCLogic {
         this.setState({ sending: true });
         const data = Object.fromEntries(new FormData(form).entries());
 
-        // ▼▼▼ 送信処理（要設定）▼▼▼
-        // 現在はデータをどこにも送信していません。フォームツール（formrun / HubSpot 等）
-        // の受信URLを下記に設定し、fetch のコメントを外してください。
-        //
-        // fetch('https://example.com/endpoint', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify(data)
-        // }).then(() => { window.location.href = './thanks.html'; });
-        // ▲▲▲ 送信処理（要設定）▲▲▲
+        const btn = form.querySelector('button[type="submit"]');
+        const btnHTML = btn ? btn.innerHTML : '';
 
-        console.log('[form] 送信内容', data);
-        window.location.href = './thanks.html';
+        // 送信中の見た目に切り替え（二重送信防止）
+        if (btn) {
+          btn.disabled = true;
+          btn.style.opacity = '0.6';
+          btn.style.cursor = 'wait';
+          btn.innerHTML = '<span style="font-size:20px;font-weight:900">送信中…</span>';
+        }
+        const restoreBtn = () => {
+          this.setState({ sending: false });
+          if (!btn) return;
+          btn.disabled = false;
+          btn.style.opacity = '';
+          btn.style.cursor = 'pointer';
+          btn.innerHTML = btnHTML;
+        };
+
+        // 前回の送信エラー表示を消す
+        form.querySelectorAll('[data-send-err]').forEach((el) => el.remove());
+        const showSendError = () => {
+          if (!btn || !btn.parentNode) { window.alert('送信に失敗しました。時間をおいて、もう一度お試しください。'); return; }
+          const p = document.createElement('p');
+          p.setAttribute('data-send-err', '');
+          p.style.cssText = 'margin:0 0 4px;padding:12px 14px;background:#FDECEA;border:1px solid #F3B8B0;border-radius:8px;font-size:12px;font-weight:700;line-height:1.8;color:#B3271A';
+          p.textContent = '送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。';
+          btn.parentNode.insertBefore(p, btn);
+          p.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        };
+
+        // EmailJS のテンプレートへ渡す変数
+        const cfg = window.EMAILJS_CONFIG || {};
+        const v = (k) => String(data[k] || '').trim() || '（未入力）';
+        const params = {
+          // 【お問い合わせ内容】
+          issue:           v('issue'),
+          interest_points: v('interest'),
+          // 【お客様情報】
+          company:         v('company'),
+          name:            v('name'),
+          email:           v('email'),
+          tel:             v('tel'),
+          // 【送信元】
+          page_url:        window.location.href,
+          submitted_at:    new Date().toLocaleString('ja-JP', { hour12: false }),
+          // 件名・差出人（テンプレート設定欄で使用）
+          subject:         '【WORKL】資料ダウンロードのお問い合わせ（' + v('company') + '）',
+          from_name:       v('company') + ' ' + v('name'),
+          reply_to:        v('email'),
+          // 全項目をまとめた本文（テンプレートを1変数で済ませたい場合用）
+          message: [
+            '【お問い合わせ内容】',
+            '現在の課題：' + v('issue'),
+            '興味を持ったポイント：' + v('interest'),
+            '',
+            '【お客様情報】',
+            '会社名：' + v('company'),
+            'お名前：' + v('name'),
+            'メール：' + v('email'),
+            '電話：' + v('tel'),
+            '',
+            '【送信元】',
+            'ページURL：' + window.location.href
+          ].join('\n')
+        };
+
+        const sending = (window.emailjs && cfg.serviceId && cfg.templateId)
+          ? window.emailjs.send(cfg.serviceId, cfg.templateId, params, { publicKey: cfg.publicKey })
+          : Promise.reject(new Error('EmailJS の読み込み／設定に失敗しています'));
+
+        sending.then(() => {
+          if (window.dataLayer) { window.dataLayer.push({ event: 'form_submit_success' }); }
+          window.location.href = './thanks.html';
+        }).catch((err) => {
+          console.error('[EmailJS] 送信に失敗しました', err);
+          restoreBtn();
+          showSendError();
+        });
       }
     };
   }

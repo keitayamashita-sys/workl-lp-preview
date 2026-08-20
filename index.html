@@ -4,9 +4,20 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3X49XL2');</script>
+<!-- End Google Tag Manager -->
 <script src="./support.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3X49XL2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +31,10 @@ html{scroll-behavior:smooth}
 @keyframes fv-twinkle{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
 @keyframes pt-tick{0%,6%{opacity:0;transform:scale(.5)}18%,94%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.5)}}
 @keyframes pt-rise{0%,10%{height:6%}42%,94%{height:100%}100%{height:6%}}
+@keyframes pt-sw{0%,44%{background:#D3DED7}56%,100%{background:#2F9461}}
+@keyframes pt-knob{0%,44%{transform:translateX(0)}56%,100%{transform:translateX(12px)}}
+@keyframes pt-fadeout{0%,44%{opacity:1}56%,100%{opacity:0}}
+@keyframes pt-fadein{0%,44%{opacity:0}56%,100%{opacity:1}}
 @keyframes pt-glow{0%,100%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 0 rgba(47,148,97,0)}50%{box-shadow:0 8px 20px rgba(31,45,36,0.08),0 0 0 5px rgba(47,148,97,0.10)}}
 .logo-marquee{position:relative;width:100%;display:flex;flex-direction:column;gap:10px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%)}
 .logo-row{overflow:hidden}
@@ -301,7 +316,7 @@ select.f-in option[value=""]{color:#A7B6AC}
       <div aria-hidden="true" style="position:absolute;left:50%;bottom:-9px;transform:translateX(-50%) rotate(45deg);width:18px;height:18px;background:#fff;border-radius:0 0 3px 0"></div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><span style="display:block;width:20px;height:2px;background:#EA7A1F"></span><span style="font-size:11px;font-weight:700;letter-spacing:0.22em;color:#EA7A1F">ANSWER</span><span style="display:block;width:20px;height:2px;background:#EA7A1F"></span></div>
-    <p style="margin:0;font-size:19px;font-weight:900;color:#fff;line-height:1.7">集まります。<span style="background:linear-gradient(transparent 60%,rgba(234,122,31,0.5) 60%)">応募が出る媒体</span>を<br>データで知っているからです。</p>
+    <p style="margin:0;font-size:19px;font-weight:900;color:#fff;line-height:1.7">集まります。<span style="background:linear-gradient(transparent 60%,rgba(234,122,31,0.5) 60%)">10,000事業所の配信実績</span>を<br>もとにAIが出稿するからです。</p>
     <div style="display:flex;flex-direction:column;gap:6px;width:100%;margin-top:2px">
       <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
         <span style="flex:none;font-size:15px;font-weight:900;color:#8FE0B4;line-height:1">01</span>
@@ -310,7 +325,7 @@ select.f-in option[value=""]{color:#A7B6AC}
       <div aria-hidden="true" style="display:flex;justify-content:center"><svg viewBox="0 0 24 24" style="width:13px;height:13px;display:block"><path d="M12 4 L12 19 M5 13 L12 20 L19 13" fill="none" stroke="rgba(143,224,180,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
         <span style="flex:none;font-size:15px;font-weight:900;color:#8FE0B4;line-height:1">02</span>
-        <div style="font-size:13px;font-weight:700;line-height:1.6;color:#fff">同業種で<span style="color:#8FE0B4;font-weight:900">応募が出た媒体</span>を特定</div>
+        <div style="font-size:13px;font-weight:700;line-height:1.6;color:#fff">同業種・同エリアの成果を<span style="color:#8FE0B4;font-weight:900">AIが分析</span></div>
       </div>
       <div aria-hidden="true" style="display:flex;justify-content:center"><svg viewBox="0 0 24 24" style="width:13px;height:13px;display:block"><path d="M12 4 L12 19 M5 13 L12 20 L19 13" fill="none" stroke="rgba(143,224,180,0.7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:11px;text-align:left">
@@ -553,7 +568,7 @@ class Component extends DCLogic {
       ok ? okIcon(11) : ngIcon(11),
       h('span', { style: { fontSize: 11, fontWeight: 700, lineHeight: 1.55, color: ok ? SUB : MUT } }, t));
     const flowArrow = (label) => h('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5 } },
-      h('div', { style: { background: DK, color: '#fff', fontSize: 11, fontWeight: 900, lineHeight: 1.4, borderRadius: 100, padding: '7px 14px', textAlign: 'center' } }, label),
+      h('div', { style: { background: DK, color: '#fff', fontSize: 11, fontWeight: 900, lineHeight: 1.4, borderRadius: 100, padding: '7px 14px', textAlign: 'center', whiteSpace: 'pre-line' } }, label),
       h('svg', { viewBox: '0 0 24 24', style: { width: 15, height: 15, display: 'block' } },
         h('path', { d: 'M12 3 L12 17 M6 11.5 L12 18.5 L18 11.5', fill: 'none', stroke: '#9CC9AC', strokeWidth: 3, strokeLinecap: 'round', strokeLinejoin: 'round' })));
     const footer = (t) => h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, background: DK, borderRadius: 8, padding: '11px 12px' } },
@@ -580,28 +595,37 @@ class Component extends DCLogic {
     const morePill = h('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, background: '#fff', border: '1px dashed #A9D2B8', borderRadius: 8, padding: '10px' } },
       h('span', { style: { fontSize: 12.5, fontWeight: 900, color: GR, lineHeight: 1 } }, '＋ ほか100媒体以上'),
       h('span', { style: { fontSize: 10.5, fontWeight: 700, color: MUT, lineHeight: 1 } }, 'にも自動配信'));
-    const illo1 = stack(10, jobDoc, flowArrow('AIが業種データから配信先を選定'), mediaGrid, morePill);
+    const illo1 = stack(10, jobDoc, flowArrow('勤務地・職種・雇用形態・TGTから\n配信先をAIが選定'), mediaGrid, morePill);
 
-    // POINT 02: 応募が集まる曜日を見つけて、その直前に出稿
-    const DAY = [['月', 26, 0], ['火', 31, 0], ['水', 24, 0], ['木', 58, 1], ['金', 67, 1], ['土', 35, 0], ['日', 19, 0]];
-    const DMAX = 67;
-    const dayBar = (d, i) => h('div', { key: 'b' + i, style: { flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', height: 86 } },
-      h('div', { style: { width: '58%', height: Math.round(d[1] / DMAX * 68), display: 'flex', alignItems: 'flex-end' } },
-        h('div', { style: { position: 'relative', width: '100%', height: '100%', borderRadius: '3px 3px 0 0', background: d[2] ? 'linear-gradient(180deg,#3AA26C,#2F9461)' : '#D3E5DA', animation: 'pt-rise 5.5s ease ' + (i * 0.13) + 's infinite both' } },
-          h('div', { style: { position: 'absolute', left: -6, right: -6, bottom: '100%', marginBottom: 4, textAlign: 'center', fontSize: 9.5, fontWeight: d[2] ? 900 : 700, lineHeight: 1, color: d[2] ? OR : '#9DB3A5' } }, d[1]))));
-    const dayLabel = (d, i) => h('div', { key: 'l' + i, style: { flex: 1, minWidth: 0, textAlign: 'center', fontSize: 10, lineHeight: 1, fontWeight: d[2] ? 900 : 500, color: d[2] ? OR : MUT } }, d[0]);
-    const chartCard = card({ padding: '12px 12px 11px' },
-      h('div', { style: { display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8, marginBottom: 6 } },
-        h('span', { style: { fontSize: 11.5, fontWeight: 900, color: TX, lineHeight: 1 } }, '曜日別の応募数'),
-        h('span', { style: { fontSize: 9.5, fontWeight: 700, color: MUT, lineHeight: 1 } }, '同業種の配信データ')),
-      h('div', { style: { display: 'flex', alignItems: 'flex-end', gap: 3, borderBottom: '2px solid #E2ECE5' } }, DAY.map(dayBar)),
-      h('div', { style: { display: 'flex', gap: 3, marginTop: 6 } }, DAY.map(dayLabel)),
-      h('div', { style: { marginTop: 10, display: 'flex', alignItems: 'center', gap: 7, background: '#FFF4E8', border: '1px solid #F7D9B4', borderRadius: 7, padding: '8px 10px' } },
-        h('svg', { viewBox: '0 0 24 24', style: { width: 13, height: 13, flex: 'none' } },
-          h('circle', { cx: 12, cy: 12, r: 9.5, fill: 'none', stroke: OR, strokeWidth: 2.4 }),
-          h('path', { d: 'M12 6.5 v6 l4 2.6', fill: 'none', stroke: OR, strokeWidth: 2.4, strokeLinecap: 'round' })),
-        h('div', { style: { fontSize: 11, fontWeight: 900, color: '#B5600F', lineHeight: 1.5 } }, '木・金に応募が集中 → その直前に出稿')));
-    const illo2 = stack(10, chartCard, footer('曜日・時間帯の見極めも出稿も、AIが自動で調整'), note('※ グラフは同業種データをもとにしたイメージです'));
+    // POINT 02: 月額定額 → 職種/勤務地/雇用形態/TGTごとに何件でも掲載、1クリックで切り替え
+    const planCard = card({ padding: '12px 13px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10 },
+      h('div', { style: { minWidth: 0 } },
+        h('div', { style: { fontSize: 10, fontWeight: 700, color: MUT, lineHeight: 1 } }, '月額定額'),
+        h('div', { style: { display: 'flex', alignItems: 'baseline', gap: 2, marginTop: 5 } },
+          h('span', { style: { fontSize: 20, fontWeight: 900, color: GR, lineHeight: 1 } }, '5.98'),
+          h('span', { style: { fontSize: 11.5, fontWeight: 900, color: GR, lineHeight: 1 } }, '万円〜'))),
+      h('div', { style: { flex: 'none', textAlign: 'center', background: '#EAF5EE', border: '1px solid #C7E3D3', borderRadius: 8, padding: '7px 13px' } },
+        h('div', { style: { fontSize: 9.5, fontWeight: 700, color: DK, lineHeight: 1 } }, '掲載できる求人数'),
+        h('div', { style: { fontSize: 14.5, fontWeight: 900, color: DK, lineHeight: 1, marginTop: 4 } }, '無制限')));
+    const sw = (on, anim) => h('div', { style: { flex: 'none', width: 26, height: 14, borderRadius: 100, background: on ? GR : '#D3DED7', padding: 2, boxSizing: 'border-box', animation: anim ? 'pt-sw 4.6s ease-in-out infinite' : 'none' } },
+      h('div', { style: { width: 10, height: 10, borderRadius: '50%', background: '#fff', transform: on ? 'translateX(12px)' : 'none', animation: anim ? 'pt-knob 4.6s ease-in-out infinite' : 'none' } }));
+    const swLabel = (on, anim) => anim
+      ? h('div', { style: { flex: 'none', position: 'relative', width: 28, height: 10 } },
+          h('span', { style: { position: 'absolute', inset: 0, fontSize: 9.5, fontWeight: 900, lineHeight: 1, color: '#9DB3A5', animation: 'pt-fadeout 4.6s ease-in-out infinite' } }, '停止中'),
+          h('span', { style: { position: 'absolute', inset: 0, fontSize: 9.5, fontWeight: 900, lineHeight: 1, color: DK, animation: 'pt-fadein 4.6s ease-in-out infinite' } }, '公開中'))
+      : h('span', { style: { flex: 'none', width: 28, fontSize: 9.5, fontWeight: 900, lineHeight: 1, color: on ? DK : '#9DB3A5' } }, on ? '公開中' : '停止中');
+    const JOBS = [['調理スタッフ', '正社員／渋谷／未経験', 1, 0], ['ホールスタッフ', 'アルバイト／新宿／学生', 1, 0], ['店長候補', '正社員／横浜／経験者', 1, 0], ['キッチン補助', 'パート／大宮／主婦(夫)', 0, 1]];
+    const jobRow = (j, i) => h('div', { key: 'j' + i, style: { display: 'flex', alignItems: 'center', gap: 8, padding: '9px 10px', borderTop: i ? '1px solid #EFF4F0' : 'none' } },
+      h('div', { style: { flex: 1, minWidth: 0 } },
+        h('div', { style: { fontSize: 11.5, fontWeight: 900, color: TX, lineHeight: 1.3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, j[0]),
+        h('div', { style: { fontSize: 9.5, fontWeight: 500, color: MUT, lineHeight: 1.3, marginTop: 3, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, j[1])),
+      swLabel(!!j[2], !!j[3]), sw(!!j[2], !!j[3]));
+    const jobList = card({ overflow: 'hidden' },
+      h('div', { style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: '9px 10px', background: '#F4F8F5', borderBottom: '1px solid #E7EFE9' } },
+        h('span', { style: { fontSize: 10.5, fontWeight: 900, color: TX, lineHeight: 1, whiteSpace: 'nowrap' } }, '掲載中の求人'),
+        h('span', { style: { fontSize: 9.5, fontWeight: 700, color: MUT, lineHeight: 1, whiteSpace: 'nowrap' } }, '1クリックで公開／停止')),
+      JOBS.map(jobRow));
+    const illo2 = stack(10, planCard, jobList, footer('職種・勤務地・雇用形態・TGTごとに、何件でも掲載できます'), note('※ 管理画面は表示イメージです'));
 
     // POINT 03: よくある求人票 → プロのライターが書き直し
     const beforeCard = h('div', { style: { background: '#F5F8F6', border: '1px solid #E1E9E4', borderRadius: 10, padding: '12px 13px', display: 'flex', flexDirection: 'column', gap: 8 } },
@@ -631,8 +655,8 @@ class Component extends DCLogic {
       fvIllustration: this.buildFV(),
       industries: ['SES', '飲食店', '人材派遣業', '現場作業・建築業', '介護', '運輸', '小売', '製造', '物流', '保険 ほか'],
       points: [
-        { num: '01', title: 'AIが100媒体以上に自動出稿', desc: '業種ごとに成果の出ている媒体へ、AIが自動で出稿。担当者が媒体を選ぶ作業は不要です。', illo: illos[0] },
-        { num: '02', title: '最適タイミングで出稿できる', desc: '求職者の動きに合わせて、応募が集まりやすいタイミングでAIが出稿を調整します。', illo: illos[1] },
+        { num: '01', title: 'AIが業種データから配信先を選定', desc: '勤務地・職種・雇用形態・ターゲット属性から、成果の出やすい配信先をAIが自動で選定。担当者が媒体を選ぶ作業は不要です。', illo: illos[0] },
+        { num: '02', title: '月額定額で好きなだけ求人掲載可能', desc: '職種・勤務地・雇用形態ごと、ターゲットごとに求人を分けて掲載可能。公開・停止も1クリックで切り替えられます。', illo: illos[1] },
         { num: '03', title: 'プロのライターが求人票を代行作成', desc: '1万事業所の支援実績をもとに、プロのライターが求人票を代行作成。WORKL独自のノウハウで、応募データを見ながら反応の出る求人票に仕上げます。', illo: illos[2] }
       ],
       cases: [
